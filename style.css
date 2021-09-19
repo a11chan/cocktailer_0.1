@@ -908,7 +908,7 @@ a {
     line-height: 1;
     text-transform: uppercase;
   }
-  .flexslider {
+  body {
     overscroll-behavior-x: none;
   }
 }
