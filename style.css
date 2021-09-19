@@ -11,6 +11,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
   color: var(--main-color);
   background: #fff;
+  touch-action: none;
 }
 .logo {
   font-family: "Paytone One", sans-serif;
@@ -907,6 +908,5 @@ a {
     text-align: center;
     line-height: 1;
     text-transform: uppercase;
-    touch-action: none;
   }
 }
