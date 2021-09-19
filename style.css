@@ -1,0 +1,911 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: var(--main-color);
+  background: #fff;
+}
+.logo {
+  font-family: "Paytone One", sans-serif;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+.flexslider {
+  overflow: hidden;
+  z-index: -1;
+}
+
+/*///// FHD /////*/
+@media screen and (min-width: 1600px) {
+  .container {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+  .pc_left,
+  .pc_right {
+    width: 50%;
+    z-index: -1;
+  }
+  .mobile {
+    display: none;
+  }
+
+  /*///// 헤더 /////*/
+  header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 185px;
+    padding: 70px 0 45px 140px;
+  }
+  .logo {
+    margin-top: -14px;
+    font-size: 85px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .logo span {
+    color: var(--logo-color);
+  }
+
+  /*/ //// 네비게이션 바 /////*/
+  #trigger {
+    position: absolute;
+    right: 60px;
+    top: 80px;
+    width: 50px;
+    height: 40px;
+    z-index: 999;
+  }
+  #trigger span {
+    position: absolute;
+    left: 0;
+    height: 6px;
+    background: var(--main-color);
+    transition: all 0.4s ease-in;
+  }
+  #trigger span:nth-child(1) {
+    top: 0;
+    width: 100%;
+  }
+  #trigger span:nth-child(2) {
+    top: 17px;
+    width: 80%;
+  }
+  #trigger span:nth-child(3) {
+    bottom: 0;
+    width: 60%;
+  }
+  #trigger.active span:nth-child(1) {
+    width: 100%;
+    transform: translateY(17px) rotate(-45deg);
+  }
+  #trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #trigger.active span:nth-child(3) {
+    width: 100%;
+    transform: translateY(-17px) rotate(45deg);
+  }
+  #mainmenu {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 50%;
+    padding: 80px 60px 80px 140px;
+    opacity: 0;
+    background: #fff url("./imgs/navbg.png") center;
+    background-size: cover;
+
+    transition: all 0.4s ease-in;
+  }
+  #mainmenu.active {
+    right: 0;
+    opacity: 1;
+  }
+  .mainmenu__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .mainmenu__menu > li > a {
+    font-family: "Paytone One", sans-serif;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+  .mainmenu__sns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 60px;
+    bottom: 80px;
+    width: 35px;
+    height: 135px;
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  /*///// 왼쪽 배너 /////*/
+  .bigbn {
+    position: relative;
+  }
+  .bigbn .flexslider .slides li img {
+    height: 100vh;
+    object-fit: cover;
+  }
+  .bigbn img {
+    height: 100%;
+  }
+
+  /*/ //// 플렉스슬라이더 버튼 /////*/
+  .custom-navigation {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    margin-top: -70px;
+    z-index: 999;
+  }
+  .custom-navigation div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .custom-navigation div:first-child {
+    margin-bottom: 20px;
+  }
+
+  /*///// 플렉스슬라이더 진행바 /////*/
+  .numbox {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 100px;
+    bottom: 105px;
+    color: #fff;
+  }
+  .numbox__bar {
+    position: relative;
+    width: 150px;
+  }
+  .numbox__bar__total {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .numbox__bar__now {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: #fff;
+  }
+
+  /*///// 오른쪽 텍스트 배너 /////*/
+  .textbn {
+    height: 50%;
+    background: url("./imgs/navbg.png") center;
+    background-size: cover;
+  }
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    padding: 185px 60px 70px 140px;
+  }
+  .textbox h2 {
+    font-family: "Gowun Batang", serif;
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .textbox p {
+    color: #707070;
+  }
+  .textbox a {
+    color: #303030;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  /*/ //// 오른쪽 이미지 배너 /////*/
+  .flexslider .slides li img {
+    height: 50vh;
+    object-fit: cover;
+  }
+  .smallbn img {
+    height: 100%;
+  }
+}
+
+/*///// HD /////*/
+@media screen and (min-width: 1250px) and (max-width: 1599px) {
+  .container {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+  .pc_left,
+  .pc_right {
+    width: 50%;
+    z-index: -1;
+  }
+  .mobile {
+    display: none;
+  }
+
+  /*///// 헤더 /////*/
+  header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 160px;
+    padding: 60px 0 50px 80px;
+  }
+  .logo {
+    margin-top: -12px;
+    font-size: 68px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .logo span {
+    color: var(--logo-color);
+  }
+
+  /*/ //// 네비게이션 바 /////*/
+  #trigger {
+    position: absolute;
+    right: 50px;
+    top: 65px;
+    width: 50px;
+    height: 40px;
+    z-index: 999;
+  }
+  #trigger span {
+    position: absolute;
+    left: 0;
+    height: 6px;
+    background: var(--main-color);
+    transition: all 0.4s ease-in;
+  }
+  #trigger span:nth-child(1) {
+    top: 0;
+    width: 100%;
+  }
+  #trigger span:nth-child(2) {
+    top: 17px;
+    width: 80%;
+  }
+  #trigger span:nth-child(3) {
+    bottom: 0;
+    width: 60%;
+  }
+  #trigger.active span:nth-child(1) {
+    width: 100%;
+    transform: translateY(17px) rotate(-45deg);
+  }
+  #trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #trigger.active span:nth-child(3) {
+    width: 100%;
+    transform: translateY(-17px) rotate(45deg);
+  }
+  #mainmenu {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 50%;
+    padding: 65px 50px 65px 80px;
+    opacity: 0;
+    background: #fff url("./imgs/navbg.png") center;
+    background-size: cover;
+    transition: all 0.4s ease-in;
+  }
+  #mainmenu.active {
+    right: 0;
+    opacity: 1;
+  }
+  .mainmenu__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .mainmenu__menu > li > a {
+    font-family: "Paytone One", sans-serif;
+    font-size: 46px;
+    line-height: 1;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+  .mainmenu__sns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 50px;
+    bottom: 65px;
+    width: 35px;
+    height: 135px;
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  /*///// 왼쪽 배너 /////*/
+  .bigbn {
+    position: relative;
+  }
+  .bigbn .flexslider .slides li img {
+    height: 100vh;
+    object-fit: cover;
+  }
+  .bigbn img {
+    height: 100%;
+  }
+
+  /*/ //// 플렉스슬라이더 버튼 /////*/
+  .custom-navigation {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    margin-top: -70px;
+    z-index: 999;
+  }
+  .custom-navigation div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .custom-navigation div:first-child {
+    margin-bottom: 20px;
+  }
+
+  /*///// 플렉스슬라이더 진행바 /////*/
+  .numbox {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 100px;
+    bottom: 105px;
+    color: #fff;
+  }
+  .numbox__bar {
+    position: relative;
+    width: 150px;
+  }
+  .numbox__bar__total {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .numbox__bar__now {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: #fff;
+  }
+
+  /*///// 오른쪽 텍스트 배너 /////*/
+  .textbn {
+    height: 50%;
+    background: url("./imgs/navbg.png") center;
+    background-size: cover;
+  }
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    padding: 160px 50px 60px 80px;
+  }
+  .textbox h2 {
+    font-family: "Gowun Batang", serif;
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .textbox p {
+    color: #707070;
+  }
+  .textbox a {
+    color: #303030;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  /*/ //// 오른쪽 이미지 배너 /////*/
+  .flexslider .slides li img {
+    height: 50vh;
+    object-fit: cover;
+  }
+  .smallbn img {
+    height: 100%;
+  }
+}
+
+/*///// TABLET /////*/
+@media screen and (min-width: 660px) and (max-width: 1249px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+  .pc_left,
+  .pc_right {
+    width: 100%;
+    z-index: -1;
+  }
+  .smallbn,
+  .mobile {
+    display: none;
+  }
+
+  /*///// 헤더 /////*/
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90px;
+    padding: 30px 0 30px 30px;
+  }
+  .logo {
+    margin-top: -12px;
+    font-size: 42px;
+    color: #fff;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .logo span {
+    color: var(--logo-color);
+  }
+
+  /*/ //// 네비게이션 바 /////*/
+  #trigger {
+    position: absolute;
+    right: 30px;
+    top: 32px;
+    width: 36px;
+    height: 26px;
+    z-index: 999;
+  }
+  #trigger span {
+    position: absolute;
+    left: 0;
+    height: 4px;
+    background: #fff;
+    transition: all 0.4s ease-in;
+  }
+  #trigger span:nth-child(1) {
+    top: 0;
+    width: 100%;
+  }
+  #trigger span:nth-child(2) {
+    top: 11px;
+    width: 80%;
+  }
+  #trigger span:nth-child(3) {
+    bottom: 0;
+    width: 60%;
+  }
+  #trigger.active span:nth-child(1) {
+    width: 100%;
+    background: var(--main-color);
+    transform: translateY(11px) rotate(-45deg);
+  }
+  #trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #trigger.active span:nth-child(3) {
+    width: 100%;
+    background: var(--main-color);
+    transform: translateY(-11px) rotate(45deg);
+  }
+  #mainmenu {
+    position: absolute;
+    left: 0;
+    top: -50%;
+    width: 100%;
+    height: 65vh;
+    padding: 100px 100px 150px 100px;
+    opacity: 0;
+    background: #fff url("./imgs/navbg.png") center;
+    background-size: cover;
+    transition: all 0.4s ease-in;
+  }
+  #mainmenu.active {
+    top: 0;
+    opacity: 1;
+  }
+  .mainmenu__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .mainmenu__menu > li > a {
+    font-family: "Paytone One", sans-serif;
+    font-size: 46px;
+    line-height: 1;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+  .mainmenu__sns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    width: 160px;
+    height: 35px;
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  /*///// 왼쪽 배너 /////*/
+  .bigbn {
+    position: relative;
+  }
+  .bigbn .flexslider .slides li img {
+    height: 65vh;
+    object-fit: cover;
+  }
+  .bigbn img {
+    height: 100%;
+  }
+
+  /*/ //// 플렉스슬라이더 버튼 /////*/
+  .custom-navigation {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -57.5px;
+    z-index: 999;
+  }
+  .custom-navigation div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 12px;
+  }
+  .custom-navigation div:first-child {
+    margin-bottom: 15px;
+  }
+
+  /*///// 플렉스슬라이더 진행바 /////*/
+  .numbox {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    margin-left: -250px;
+    color: #fff;
+  }
+  .numbox__bar {
+    position: relative;
+    width: 500px;
+  }
+  .numbox__bar__total {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .numbox__bar__now {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #fff;
+  }
+
+  /*///// 오른쪽 텍스트 배너 /////*/
+  .textbn {
+    height: 35vh;
+    background: url("./imgs/navbg.png") center;
+    background-size: cover;
+  }
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 35vh;
+    padding: 80px 30px 40px 30px;
+  }
+  .textbox h2 {
+    font-family: "Gowun Batang", serif;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .textbox p {
+    color: #707070;
+    text-align: center;
+  }
+  .textbox a {
+    color: #303030;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+}
+
+/*///// MOBILE /////*/
+@media screen and (max-width: 659px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+  .pc_left,
+  .pc_right {
+    width: 100%;
+    z-index: -1;
+  }
+  .smallbn {
+    display: none;
+  }
+
+  /*///// 헤더 /////*/
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90px;
+    padding: 30px 0 30px 15px;
+  }
+  .logo {
+    margin-top: -12px;
+    font-size: 42px;
+    color: #fff;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .logo span {
+    color: var(--logo-color);
+  }
+
+  /*/ //// 네비게이션 바 /////*/
+  #trigger {
+    position: absolute;
+    right: 15px;
+    top: 28px;
+    width: 36px;
+    height: 26px;
+    z-index: 999;
+  }
+  #trigger span {
+    position: absolute;
+    left: 0;
+    height: 4px;
+    background: #fff;
+    transition: all 0.4s ease-in;
+  }
+  #trigger span:nth-child(1) {
+    top: 0;
+    width: 100%;
+  }
+  #trigger span:nth-child(2) {
+    top: 11px;
+    width: 80%;
+  }
+  #trigger span:nth-child(3) {
+    bottom: 0;
+    width: 60%;
+  }
+  #trigger.active span:nth-child(1) {
+    width: 100%;
+    background: var(--main-color);
+    transform: translateY(11px) rotate(-45deg);
+  }
+  #trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  #trigger.active span:nth-child(3) {
+    width: 100%;
+    background: var(--main-color);
+    transform: translateY(-11px) rotate(45deg);
+  }
+  #mainmenu {
+    position: absolute;
+    left: 0;
+    top: -50%;
+    width: 100%;
+    height: 65vh;
+    padding: 100px 15px 150px 15px;
+    opacity: 0;
+    background: #fff url("./imgs/navbg.png") center;
+    background-size: cover;
+    transition: all 0.4s ease-in;
+  }
+  #mainmenu.active {
+    top: 0;
+    opacity: 1;
+  }
+  .mainmenu__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .mainmenu__menu > li > a {
+    font-family: "Paytone One", sans-serif;
+    font-size: 34px;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .mainmenu__sns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    width: 160px;
+    height: 35px;
+    font-size: 32px;
+    line-height: 1;
+  }
+
+  /*///// 왼쪽 배너 /////*/
+  .bigbn {
+    position: relative;
+  }
+  .bigbn .flexslider .slides li img {
+    height: 65vh;
+    object-fit: cover;
+  }
+  .bigbn img {
+    height: 100%;
+  }
+
+  /*/ //// 플렉스슬라이더 버튼 /////*/
+  .custom-navigation {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -57.5px;
+    z-index: 999;
+  }
+  /* .custom-navigation div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 12px;
+  }
+  .custom-navigation div:first-child {
+    margin-bottom: 15px;
+  } */
+
+  /*///// 플렉스슬라이더 진행바 /////*/
+  .numbox {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    margin-left: -150px;
+    /* width: 500px; */
+    /* margin-left: -250px; */
+    color: #fff;
+  }
+  .numbox__bar {
+    position: relative;
+    width: 300px;
+  }
+  .numbox__bar__total {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .numbox__bar__now {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #fff;
+  }
+
+  /*///// 오른쪽 텍스트 배너 /////*/
+  .textbn {
+    height: 35vh;
+    background: url("./imgs/navbg.png") center;
+    background-size: cover;
+  }
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 35vh;
+    padding: 60px 15px 100px 15px;
+  }
+  .textbox h2 {
+    display: none;
+  }
+  .textbox p {
+    color: #707070;
+    text-align: center;
+  }
+  .textbox a {
+    color: #303030;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  .mobile {
+    position: absolute;
+    bottom: 35vh;
+    left: 0;
+    right: 0;
+    margin: 90px 15px;
+    background: none;
+    color: #fff;
+    font-family: "Gowun Batang", serif;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
