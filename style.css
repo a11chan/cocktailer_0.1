@@ -25,7 +25,6 @@ a {
 .flexslider {
   overflow: hidden;
   z-index: -1;
-  touch-action: none;
 }
 
 /*///// FHD /////*/
@@ -908,5 +907,8 @@ a {
     text-align: center;
     line-height: 1;
     text-transform: uppercase;
+  }
+  .flexslider {
+    overscroll-behavior-x: none;
   }
 }
