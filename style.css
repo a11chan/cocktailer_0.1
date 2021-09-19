@@ -6,12 +6,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  touch-action: none;
 }
 body {
   font-family: "Noto Sans KR", sans-serif;
   color: var(--main-color);
   background: #fff;
-  touch-action: none;
 }
 .logo {
   font-family: "Paytone One", sans-serif;
