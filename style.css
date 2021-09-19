@@ -6,7 +6,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  touch-action: none;
 }
 body {
   font-family: "Noto Sans KR", sans-serif;
@@ -26,6 +25,7 @@ a {
 .flexslider {
   overflow: hidden;
   z-index: -1;
+  touch-action: none;
 }
 
 /*///// FHD /////*/
