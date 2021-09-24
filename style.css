@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap");
 @import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
 
 * {
@@ -129,7 +129,7 @@ a {
     font-family: "Paytone One", sans-serif;
     font-size: 60px;
     line-height: 1;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
   }
   .mainmenu__sns {
@@ -144,6 +144,9 @@ a {
     height: 135px;
     font-size: 32px;
     line-height: 1;
+  }
+  .mainmenu__sns i {
+    color: #979797;
   }
 
   /*///// 왼쪽 배너 /////*/
@@ -185,7 +188,8 @@ a {
     flex-direction: column;
     position: absolute;
     left: 100px;
-    bottom: 105px;
+    bottom: 100px;
+    font-size: 13px;
     color: #fff;
   }
   .numbox__bar {
@@ -234,6 +238,9 @@ a {
     color: #303030;
     font-size: 13px;
     text-transform: uppercase;
+  }
+  .textbox a span {
+    color: #535353;
   }
 
   /*/ //// 오른쪽 이미지 배너 /////*/
@@ -347,7 +354,7 @@ a {
     font-family: "Paytone One", sans-serif;
     font-size: 46px;
     line-height: 1;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
   }
   .mainmenu__sns {
@@ -362,6 +369,9 @@ a {
     height: 135px;
     font-size: 32px;
     line-height: 1;
+  }
+  .mainmenu__sns i {
+    color: #979797;
   }
 
   /*///// 왼쪽 배너 /////*/
@@ -403,7 +413,7 @@ a {
     flex-direction: column;
     position: absolute;
     left: 100px;
-    bottom: 105px;
+    bottom: 100px;
     color: #fff;
   }
   .numbox__bar {
@@ -452,6 +462,9 @@ a {
     color: #303030;
     font-size: 13px;
     text-transform: uppercase;
+  }
+  .textbox a span {
+    color: #535353;
   }
 
   /*/ //// 오른쪽 이미지 배너 /////*/
@@ -524,11 +537,11 @@ a {
   }
   #trigger span:nth-child(2) {
     top: 11px;
-    width: 80%;
+    width: 29px;
   }
   #trigger span:nth-child(3) {
     bottom: 0;
-    width: 60%;
+    width: 22px;
   }
   #trigger.active span:nth-child(1) {
     width: 100%;
@@ -549,7 +562,7 @@ a {
     top: -50%;
     width: 100%;
     height: 65vh;
-    padding: 100px 100px 150px 100px;
+    padding: 90px 90px 150px 90px;
     opacity: 0;
     background: #fff url("./imgs/navbg.png") center;
     background-size: cover;
@@ -569,7 +582,7 @@ a {
     font-family: "Paytone One", sans-serif;
     font-size: 46px;
     line-height: 1;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-transform: uppercase;
   }
   .mainmenu__sns {
@@ -583,6 +596,9 @@ a {
     height: 35px;
     font-size: 32px;
     line-height: 1;
+  }
+  .mainmenu__sns i {
+    color: #979797;
   }
 
   /*///// 왼쪽 배너 /////*/
@@ -616,7 +632,7 @@ a {
     font-size: 12px;
   }
   .custom-navigation div:first-child {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
   }
 
   /*///// 플렉스슬라이더 진행바 /////*/
@@ -678,6 +694,9 @@ a {
     color: #303030;
     font-size: 13px;
     text-transform: uppercase;
+  }
+  .textbox a span {
+    color: #535353;
   }
 }
 
@@ -765,7 +784,7 @@ a {
     top: -50%;
     width: 100%;
     height: 65vh;
-    padding: 100px 15px 150px 15px;
+    padding: 90px 15px 150px 15px;
     opacity: 0;
     background: #fff url("./imgs/navbg.png") center;
     background-size: cover;
@@ -800,6 +819,9 @@ a {
     font-size: 32px;
     line-height: 1;
   }
+  .mainmenu__sns i {
+    color: #979797;
+  }
 
   /*///// 왼쪽 배너 /////*/
   .bigbn {
@@ -822,7 +844,7 @@ a {
     margin-top: -57.5px;
     z-index: 999;
   }
-  /* .custom-navigation div {
+  .custom-navigation div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -834,7 +856,7 @@ a {
   }
   .custom-navigation div:first-child {
     margin-bottom: 15px;
-  } */
+  }
 
   /*///// 플렉스슬라이더 진행바 /////*/
   .numbox {
@@ -894,21 +916,20 @@ a {
     font-size: 13px;
     text-transform: uppercase;
   }
+  .textbox a span {
+    color: #535353;
+  }
   .mobile {
     position: absolute;
     bottom: 35vh;
     left: 0;
     right: 0;
-    margin: 90px 15px;
+    margin: 85px 15px;
     background: none;
     color: #fff;
     font-family: "Gowun Batang", serif;
-    font-size: 18px;
     text-align: center;
     line-height: 1;
     text-transform: uppercase;
-  }
-  body {
-    overscroll-behavior-x: none;
   }
 }
