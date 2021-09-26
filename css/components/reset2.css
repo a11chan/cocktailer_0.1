@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+/* ///// reset ///// */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #333;
+  background: #fff;
+  font-size: 16px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+#toosmall {
+  display: none;
+}

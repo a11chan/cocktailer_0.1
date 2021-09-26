@@ -1,32 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap");
-@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: "Noto Sans KR", sans-serif;
-  color: var(--main-color);
-  background: #fff;
-}
-.logo {
-  font-family: "Paytone One", sans-serif;
-}
-ul li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: var(--main-color);
-}
 .flexslider {
   overflow: hidden;
   z-index: -1;
 }
-
 /*///// FHD /////*/
 @media screen and (min-width: 1600px) {
   .container {
@@ -110,7 +85,7 @@ a {
     height: 50%;
     padding: 80px 60px 80px 140px;
     opacity: 0;
-    background: #fff url("./imgs/navbg.png") center;
+    background: #fff url("../imgs/navbg.png") center;
     background-size: cover;
 
     transition: all 0.4s ease-in;
@@ -215,7 +190,7 @@ a {
   /*///// 오른쪽 텍스트 배너 /////*/
   .textbn {
     height: 50%;
-    background: url("./imgs/navbg.png") center;
+    background: #fff url("../imgs/navbg.png") center;
     background-size: cover;
   }
   .textbox {
@@ -336,7 +311,7 @@ a {
     height: 50%;
     padding: 65px 50px 65px 80px;
     opacity: 0;
-    background: #fff url("./imgs/navbg.png") center;
+    background: #fff url("../imgs/navbg.png") center;
     background-size: cover;
     transition: all 0.4s ease-in;
   }
@@ -439,7 +414,7 @@ a {
   /*///// 오른쪽 텍스트 배너 /////*/
   .textbn {
     height: 50%;
-    background: url("./imgs/navbg.png") center;
+    background: #fff url("../imgs/navbg.png") center;
     background-size: cover;
   }
   .textbox {
@@ -564,7 +539,7 @@ a {
     height: 65vh;
     padding: 90px 90px 150px 90px;
     opacity: 0;
-    background: #fff url("./imgs/navbg.png") center;
+    background: #fff url("../imgs/navbg.png") center;
     background-size: cover;
     transition: all 0.4s ease-in;
   }
@@ -668,7 +643,7 @@ a {
   /*///// 오른쪽 텍스트 배너 /////*/
   .textbn {
     height: 35vh;
-    background: url("./imgs/navbg.png") center;
+    background: #fff url("../imgs/navbg.png") center;
     background-size: cover;
   }
   .textbox {
@@ -786,7 +761,7 @@ a {
     height: 65vh;
     padding: 90px 15px 150px 15px;
     opacity: 0;
-    background: #fff url("./imgs/navbg.png") center;
+    background: #fff url("../imgs/navbg.png") center;
     background-size: cover;
     transition: all 0.4s ease-in;
   }
@@ -893,7 +868,7 @@ a {
   /*///// 오른쪽 텍스트 배너 /////*/
   .textbn {
     height: 35vh;
-    background: url("./imgs/navbg.png") center;
+    background: #fff url("../imgs/navbg.png") center;
     background-size: cover;
   }
   .textbox {
