@@ -1,5 +1,9 @@
 #trigger {
+  position: fixed;
   z-index: 999;
+}
+#mainmenu {
+  position: fixed;
 }
 /*///// FHD /////*/
 @media screen and (min-width: 1450px) {
