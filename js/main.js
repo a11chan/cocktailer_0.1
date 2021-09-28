@@ -48,14 +48,14 @@ $(document).ready(function () {
   // 플렉스슬라이더 버튼 클릭 전 자동으로 text,bar 변경
   setInterval(function () {
     if ($("ul.slides li").eq(1).hasClass("flex-active-slide")) {
-      nowBar();
       $("div.numbox div").eq(0).text("1 / 3");
+      nowBar();
     } else if ($("ul.slides li").eq(2).hasClass("flex-active-slide")) {
-      nowBar();
       $("div.numbox div").eq(0).text("2 / 3");
-    } else if ($("ul.slides li").eq(3).hasClass("flex-active-slide")) {
       nowBar();
+    } else if ($("ul.slides li").eq(3).hasClass("flex-active-slide")) {
       $("div.numbox div").eq(0).text("3 / 3");
+      nowBar();
     }
   }, 7000);
 });
