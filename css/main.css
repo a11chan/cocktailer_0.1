@@ -1,22 +1,29 @@
+body {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
 .flexslider {
   overflow: hidden;
   z-index: -1;
 }
+.container {
+  display: flex;
+}
 /*///// FHD /////*/
 @media screen and (min-width: 1600px) {
-  .container {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
+  .mobile {
+    display: none;
   }
+  /*///// 구조 /////*/
   .pc_left,
   .pc_right {
     width: 50%;
-    z-index: -1;
+    height: 100%;
   }
-  .mobile {
-    display: none;
+  .pc_right {
+    display: flex;
+    flex-direction: column;
   }
 
   /*///// 헤더 /////*/
@@ -93,6 +100,7 @@
   #mainmenu.active {
     right: 0;
     opacity: 1;
+    z-index: 998;
   }
   .mainmenu__menu {
     display: flex;
@@ -106,6 +114,9 @@
     line-height: 1;
     letter-spacing: 3px;
     text-transform: uppercase;
+  }
+  .mainmenu__menu > li > a:hover {
+    color: var(--logo-color);
   }
   .mainmenu__sns {
     display: flex;
@@ -125,23 +136,58 @@
   }
 
   /*///// 왼쪽 배너 /////*/
-  .bigbn {
-    position: relative;
-  }
-  .bigbn .flexslider .slides li img {
+  .flexslider .slides .bigbn img {
     height: 100vh;
+  }
+  .bigbn > img {
+    height: 100%;
     object-fit: cover;
   }
-  .bigbn img {
+
+  /*///// 오른쪽 텍스트 배너 /////*/
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    padding: 185px 60px 70px 140px;
+    background: #fff url("../imgs/navbg.png") center;
+    background-size: cover;
+  }
+  .textbox h2 {
+    font-family: "Gowun Batang", serif;
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .textbox p {
+    color: #707070;
+  }
+  .textbox a {
+    color: #303030;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  .textbox a span {
+    color: #535353;
+  }
+
+  /*/ //// 오른쪽 이미지 배너 /////*/
+  .flexslider .slides .smallbn > img {
+    height: 50vh;
+  }
+  .smallbn img {
     height: 100%;
+    object-fit: cover;
   }
 
   /*/ //// 플렉스슬라이더 버튼 /////*/
   .custom-navigation {
     position: absolute;
     top: 50%;
-    right: 40px;
+    right: 50%;
     margin-top: -70px;
+    margin-right: 40px;
     z-index: 999;
   }
   .custom-navigation div {
@@ -186,63 +232,22 @@
     height: 2px;
     background: #fff;
   }
-
-  /*///// 오른쪽 텍스트 배너 /////*/
-  .textbn {
-    height: 50%;
-    background: #fff url("../imgs/navbg.png") center;
-    background-size: cover;
-  }
-  .textbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 50vh;
-    padding: 185px 60px 70px 140px;
-  }
-  .textbox h2 {
-    font-family: "Gowun Batang", serif;
-    font-size: 40px;
-    line-height: 1;
-    text-transform: uppercase;
-  }
-  .textbox p {
-    color: #707070;
-  }
-  .textbox a {
-    color: #303030;
-    font-size: 13px;
-    text-transform: uppercase;
-  }
-  .textbox a span {
-    color: #535353;
-  }
-
-  /*/ //// 오른쪽 이미지 배너 /////*/
-  .flexslider .slides li img {
-    height: 50vh;
-    object-fit: cover;
-  }
-  .smallbn img {
-    height: 100%;
-  }
 }
 
 /*///// HD /////*/
 @media screen and (min-width: 1250px) and (max-width: 1599px) {
-  .container {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
+  .mobile {
+    display: none;
   }
+  /*///// 구조 /////*/
   .pc_left,
   .pc_right {
     width: 50%;
-    z-index: -1;
+    height: 100%;
   }
-  .mobile {
-    display: none;
+  .pc_right {
+    display: flex;
+    flex-direction: column;
   }
 
   /*///// 헤더 /////*/
@@ -318,6 +323,7 @@
   #mainmenu.active {
     right: 0;
     opacity: 1;
+    z-index: 998;
   }
   .mainmenu__menu {
     display: flex;
@@ -331,6 +337,9 @@
     line-height: 1;
     letter-spacing: 3px;
     text-transform: uppercase;
+  }
+  .mainmenu__menu > li > a:hover {
+    color: var(--logo-color);
   }
   .mainmenu__sns {
     display: flex;
@@ -350,23 +359,58 @@
   }
 
   /*///// 왼쪽 배너 /////*/
-  .bigbn {
-    position: relative;
-  }
-  .bigbn .flexslider .slides li img {
+  .flexslider .slides .bigbn img {
     height: 100vh;
+  }
+  .bigbn > img {
+    height: 100%;
     object-fit: cover;
   }
-  .bigbn img {
+
+  /*///// 오른쪽 텍스트 배너 /////*/
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    padding: 160px 50px 60px 80px;
+    background: #fff url("../imgs/navbg.png") center;
+    background-size: cover;
+  }
+  .textbox h2 {
+    font-family: "Gowun Batang", serif;
+    font-size: 40px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .textbox p {
+    color: #707070;
+  }
+  .textbox a {
+    color: #303030;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  .textbox a span {
+    color: #535353;
+  }
+
+  /*/ //// 오른쪽 이미지 배너 /////*/
+  .flexslider .slides .smallbn > img {
+    height: 50vh;
+  }
+  .smallbn img {
     height: 100%;
+    object-fit: cover;
   }
 
   /*/ //// 플렉스슬라이더 버튼 /////*/
   .custom-navigation {
     position: absolute;
     top: 50%;
-    right: 40px;
+    right: 50%;
     margin-top: -70px;
+    margin-right: 40px;
     z-index: 999;
   }
   .custom-navigation div {
@@ -389,6 +433,7 @@
     position: absolute;
     left: 100px;
     bottom: 100px;
+    font-size: 13px;
     color: #fff;
   }
   .numbox__bar {
@@ -410,65 +455,21 @@
     height: 2px;
     background: #fff;
   }
-
-  /*///// 오른쪽 텍스트 배너 /////*/
-  .textbn {
-    height: 50%;
-    background: #fff url("../imgs/navbg.png") center;
-    background-size: cover;
-  }
-  .textbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 50vh;
-    padding: 160px 50px 60px 80px;
-  }
-  .textbox h2 {
-    font-family: "Gowun Batang", serif;
-    font-size: 40px;
-    line-height: 1;
-    text-transform: uppercase;
-  }
-  .textbox p {
-    color: #707070;
-  }
-  .textbox a {
-    color: #303030;
-    font-size: 13px;
-    text-transform: uppercase;
-  }
-  .textbox a span {
-    color: #535353;
-  }
-
-  /*/ //// 오른쪽 이미지 배너 /////*/
-  .flexslider .slides li img {
-    height: 50vh;
-    object-fit: cover;
-  }
-  .smallbn img {
-    height: 100%;
-  }
 }
 
 /*///// TABLET /////*/
 @media screen and (min-width: 660px) and (max-width: 1249px) {
+  .smallbn,
+  .mobile {
+    display: none;
+  }
+  /*///// 구조 /////*/
   .container {
-    display: flex;
     flex-direction: column;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
   }
   .pc_left,
   .pc_right {
     width: 100%;
-    z-index: -1;
-  }
-  .smallbn,
-  .mobile {
-    display: none;
   }
 
   /*///// 헤더 /////*/
@@ -546,6 +547,7 @@
   #mainmenu.active {
     top: 0;
     opacity: 1;
+    z-index: 998;
   }
   .mainmenu__menu {
     display: flex;
@@ -559,6 +561,9 @@
     line-height: 1;
     letter-spacing: 3px;
     text-transform: uppercase;
+  }
+  .mainmenu__menu > li > a:hover {
+    color: var(--logo-color);
   }
   .mainmenu__sns {
     display: flex;
@@ -577,24 +582,51 @@
   }
 
   /*///// 왼쪽 배너 /////*/
-  .bigbn {
-    position: relative;
-  }
-  .bigbn .flexslider .slides li img {
+  .flexslider .slides .bigbn img {
     height: 65vh;
+  }
+  .bigbn > img {
+    height: 100%;
     object-fit: cover;
   }
-  .bigbn img {
-    height: 100%;
+
+  /*///// 오른쪽 텍스트 배너 /////*/
+  .textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 35vh;
+    padding: 80px 30px 40px 30px;
+    background: #fff url("../imgs/navbg.png") center;
+    background-size: cover;
+  }
+  .textbox h2 {
+    font-family: "Gowun Batang", serif;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .textbox p {
+    color: #707070;
+    text-align: center;
+  }
+  .textbox a {
+    color: #303030;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  .textbox a span {
+    color: #535353;
   }
 
   /*/ //// 플렉스슬라이더 버튼 /////*/
   .custom-navigation {
     position: absolute;
-    top: 50%;
+    top: 32.5vh;
     right: 30px;
-    margin-top: -57.5px;
-    z-index: 999;
+    margin-top: -58px;
   }
   .custom-navigation div {
     display: flex;
@@ -616,8 +648,10 @@
     flex-direction: column;
     position: absolute;
     left: 50%;
-    bottom: 30px;
+    bottom: 35vh;
     margin-left: -250px;
+    margin-bottom: 30px;
+    font-size: 13px;
     color: #fff;
   }
   .numbox__bar {
@@ -639,58 +673,22 @@
     height: 3px;
     background: #fff;
   }
-
-  /*///// 오른쪽 텍스트 배너 /////*/
-  .textbn {
-    height: 35vh;
-    background: #fff url("../imgs/navbg.png") center;
-    background-size: cover;
-  }
-  .textbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 35vh;
-    padding: 80px 30px 40px 30px;
-  }
-  .textbox h2 {
-    font-family: "Gowun Batang", serif;
-    font-size: 30px;
-    line-height: 1;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  .textbox p {
-    color: #707070;
-    text-align: center;
-  }
-  .textbox a {
-    color: #303030;
-    font-size: 13px;
-    text-transform: uppercase;
-  }
-  .textbox a span {
-    color: #535353;
-  }
 }
 
 /*///// MOBILE /////*/
 @media screen and (max-width: 659px) {
+  .smallbn,
+  .textbox h2,
+  .custom-navigation {
+    display: none;
+  }
+  /*///// 구조 /////*/
   .container {
-    display: flex;
     flex-direction: column;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
   }
   .pc_left,
   .pc_right {
     width: 100%;
-    z-index: -1;
-  }
-  .smallbn {
-    display: none;
   }
 
   /*///// 헤더 /////*/
@@ -768,6 +766,7 @@
   #mainmenu.active {
     top: 0;
     opacity: 1;
+    z-index: 998;
   }
   .mainmenu__menu {
     display: flex;
@@ -781,6 +780,9 @@
     line-height: 1;
     letter-spacing: 3px;
     text-transform: uppercase;
+  }
+  .mainmenu__menu > li > a:hover {
+    color: var(--logo-color);
   }
   .mainmenu__sns {
     display: flex;
@@ -797,40 +799,52 @@
   .mainmenu__sns i {
     color: #979797;
   }
-
   /*///// 왼쪽 배너 /////*/
+  .flexslider .slides .bigbn img {
+    height: 65vh;
+  }
+  .bigbn > img {
+    height: 100%;
+    object-fit: cover;
+  }
   .bigbn {
     position: relative;
   }
-  .bigbn .flexslider .slides li img {
-    height: 65vh;
-    object-fit: cover;
-  }
-  .bigbn img {
-    height: 100%;
+  h2.mobile {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 85px;
+    color: #fff;
+    font-family: "Gowun Batang", serif;
+    text-align: center;
+    line-height: 1;
+    text-transform: uppercase;
   }
 
-  /*/ //// 플렉스슬라이더 버튼 /////*/
-  .custom-navigation {
-    display: none;
-    position: absolute;
-    top: 50%;
-    right: 30px;
-    margin-top: -57.5px;
-    z-index: 999;
-  }
-  .custom-navigation div {
+  /*///// 오른쪽 텍스트 배너 /////*/
+  .textbox {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #fff;
-    font-size: 12px;
+    height: 35vh;
+    padding: 60px 30px 100px 30px;
+    background: #fff url("../imgs/navbg.png") center;
+    background-size: cover;
   }
-  .custom-navigation div:first-child {
-    margin-bottom: 15px;
+  .textbox p {
+    color: #707070;
+    text-align: center;
+  }
+  .textbox a {
+    color: #303030;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  .textbox a span {
+    color: #535353;
   }
 
   /*///// 플렉스슬라이더 진행바 /////*/
@@ -839,10 +853,10 @@
     flex-direction: column;
     position: absolute;
     left: 50%;
-    bottom: 30px;
+    bottom: 35vh;
     margin-left: -150px;
-    /* width: 500px; */
-    /* margin-left: -250px; */
+    margin-bottom: 30px;
+    font-size: 13px;
     color: #fff;
   }
   .numbox__bar {
@@ -863,48 +877,5 @@
     left: 0;
     height: 3px;
     background: #fff;
-  }
-
-  /*///// 오른쪽 텍스트 배너 /////*/
-  .textbn {
-    height: 35vh;
-    background: #fff url("../imgs/navbg.png") center;
-    background-size: cover;
-  }
-  .textbox {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 35vh;
-    padding: 60px 15px 100px 15px;
-  }
-  .textbox h2 {
-    display: none;
-  }
-  .textbox p {
-    color: #707070;
-    text-align: center;
-  }
-  .textbox a {
-    color: #303030;
-    font-size: 13px;
-    text-transform: uppercase;
-  }
-  .textbox a span {
-    color: #535353;
-  }
-  .mobile {
-    position: absolute;
-    bottom: 35vh;
-    left: 0;
-    right: 0;
-    margin: 85px 15px;
-    background: none;
-    color: #fff;
-    font-family: "Gowun Batang", serif;
-    text-align: center;
-    line-height: 1;
-    text-transform: uppercase;
   }
 }

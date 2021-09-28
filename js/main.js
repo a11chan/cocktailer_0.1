@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  // $("#age_submit").click(function () {
+  //   var inputValue = $("input[type=text]").val();
+  //   if ((parseInt(inputValue) === NaN) | (parseInt(inputValue) < 0)) {
+  //     var div = document.createElement("div");
+  //     div.innerHTML = "Please write real positive number!";
+  //     var text = $("input[type=text]");
+  //     document.body.appendChild(div);
+  //   }
+  // });
+
   $("#trigger").click(function (e) {
     e.preventDefault();
     $(this).toggleClass("active");

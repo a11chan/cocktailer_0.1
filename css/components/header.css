@@ -13,11 +13,9 @@
     height: 80px;
     padding: 0 50px;
     background: rgba(43, 46, 74, 0.7);
+    z-index: 998;
   }
-  .logobox {
-    display: flex;
-    align-items: center;
-  }
+
   .logo {
     margin-top: -5px;
     font-size: 40px;
@@ -28,7 +26,9 @@
   .logo span {
     color: #f771d1;
   }
-
+  .topmenu {
+    display: flex;
+  }
   .topmenu a {
     margin-left: 16px;
     color: #fff;
@@ -52,6 +52,7 @@
     height: 80px;
     padding: 0 50px;
     background: rgba(43, 46, 74, 0.7);
+    z-index: 998;
   }
   .logobox {
     display: flex;
@@ -66,6 +67,9 @@
   }
   .logo span {
     color: #f771d1;
+  }
+  .topmenu {
+    display: flex;
   }
 
   .topmenu a {
@@ -91,6 +95,7 @@
     height: 80px;
     padding: 0 30px;
     background: rgba(43, 46, 74, 0.7);
+    z-index: 998;
   }
   .logobox {
     display: flex;
@@ -132,6 +137,7 @@
     height: 60px;
     padding: 0 15px;
     background: rgba(43, 46, 74, 0.7);
+    z-index: 998;
   }
   .logobox {
     display: flex;

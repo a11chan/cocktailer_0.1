@@ -1,15 +1,8 @@
-#trigger {
-  position: fixed;
-  z-index: 999;
-}
-#mainmenu {
-  position: fixed;
-}
 /*///// FHD /////*/
 @media screen and (min-width: 1450px) {
   /*/ //// 트리거 /////*/
   #trigger {
-    position: absolute;
+    position: fixed;
     left: 312px;
     top: 28px;
     width: 30px;
@@ -33,19 +26,6 @@
   #trigger span:nth-child(3) {
     bottom: 0;
   }
-  /* #trigger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 23px;
-    margin-left: 16px;
-  }
-  #trigger span {
-    width: 30px;
-    height: 3px;
-    background: #fff;
-  } */
   #trigger.active span:nth-child(1) {
     width: 100%;
     transform: translateY(10px) rotate(-45deg);
@@ -59,8 +39,8 @@
   }
   #mainmenu {
     position: fixed;
-    top: 0;
-    right: -50%;
+    top: -100%;
+    left: 0;
     width: 50%;
     height: 50%;
     padding: 80px 60px 80px 140px;
@@ -68,9 +48,10 @@
     background: #fff url("../../imgs/navbg.png") center;
     background-size: cover;
     transition: all 0.4s ease-in;
+    z-index: 999;
   }
   #mainmenu.active {
-    right: 0;
+    top: 80px;
     opacity: 1;
   }
   .mainmenu__menu {
@@ -81,12 +62,14 @@
   }
   .mainmenu__menu > li > a {
     font-family: "Paytone One", sans-serif;
-    font-size: 60px;
+    font-size: 50px;
     color: #332b3b;
-
     line-height: 1;
     letter-spacing: 3px;
     text-transform: uppercase;
+  }
+  .mainmenu__menu > li > a:hover {
+    color: var(--logo-color);
   }
   .mainmenu__sns {
     display: flex;
@@ -108,7 +91,7 @@
 /*///// HD /////*/
 @media screen and (min-width: 1050px) and (max-width: 1449px) {
   #trigger {
-    position: absolute;
+    position: fixed;
     left: 312px;
     top: 28px;
     width: 30px;
@@ -132,21 +115,6 @@
   #trigger span:nth-child(3) {
     bottom: 0;
   }
-  /* #trigger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 23px;
-    margin-left: 16px;
-    cursor: pointer;
-  }
-  #trigger span {
-    width: 30px;
-    height: 3px;
-    background: #fff;
-  } */
-
   #trigger.active span:nth-child(1) {
     width: 100%;
     transform: translateY(10px) rotate(-45deg);
@@ -160,8 +128,8 @@
   }
   #mainmenu {
     position: fixed;
-    top: 0;
-    right: -50%;
+    top: -100%;
+    left: 0;
     width: 50%;
     height: 50%;
     padding: 65px 50px 65px 80px;
@@ -169,9 +137,10 @@
     background: #fff url("../../imgs/navbg.png") center;
     background-size: cover;
     transition: all 0.4s ease-in;
+    z-index: 999;
   }
   #mainmenu.active {
-    right: 0;
+    top: 80px;
     opacity: 1;
   }
   .mainmenu__menu {
@@ -182,10 +151,13 @@
   }
   .mainmenu__menu > li > a {
     font-family: "Paytone One", sans-serif;
-    font-size: 46px;
+    font-size: 38px;
     line-height: 1;
     letter-spacing: 3px;
     text-transform: uppercase;
+  }
+  .mainmenu__menu > li > a:hover {
+    color: var(--logo-color);
   }
   .mainmenu__sns {
     display: flex;
@@ -208,7 +180,7 @@
 /*///// TABLET /////*/
 @media screen and (min-width: 660px) and (max-width: 1049px) {
   #trigger {
-    position: absolute;
+    position: fixed;
     left: 268px;
     top: 28px;
     width: 30px;
@@ -232,32 +204,16 @@
   #trigger span:nth-child(3) {
     bottom: 0;
   }
-  /* #trigger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    margin-left: 16px;
-    cursor: pointer;
-  }
-  #trigger span {
-    width: 30px;
-    height: 3px;
-    background: #fff;
-  } */
   #trigger.active span:nth-child(1) {
     width: 100%;
-    background: #332b3b;
-    transform: translateY(11px) rotate(-45deg);
+    transform: translateY(10px) rotate(-45deg);
   }
   #trigger.active span:nth-child(2) {
     opacity: 0;
   }
   #trigger.active span:nth-child(3) {
     width: 100%;
-    background: #332b3b;
-    transform: translateY(-11px) rotate(45deg);
+    transform: translateY(-10px) rotate(45deg);
   }
   #mainmenu {
     position: fixed;
@@ -270,9 +226,10 @@
     background: #fff url("../../imgs/navbg.png") center;
     background-size: cover;
     transition: all 0.4s ease-in;
+    z-index: 999;
   }
   #mainmenu.active {
-    top: 0;
+    top: 80px;
     opacity: 1;
   }
   .mainmenu__menu {
@@ -287,6 +244,9 @@
     line-height: 1;
     letter-spacing: 3px;
     text-transform: uppercase;
+  }
+  .mainmenu__menu > li > a:hover {
+    color: var(--logo-color);
   }
   .mainmenu__sns {
     display: flex;
@@ -307,23 +267,8 @@
 
 /*///// MOBILE /////*/
 @media screen and (max-width: 659px) {
-  /*/ //// 네비게이션 바 /////*/
-  /* #trigger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 19px;
-    margin-left: 16px;
-    cursor: pointer;
-  }
-  #trigger span {
-    width: 24px;
-    height: 3px;
-    background: #fff;
-  } */
   #trigger {
-    position: absolute;
+    position: fixed;
     left: 203px;
     top: 21px;
     width: 24px;
@@ -349,7 +294,6 @@
   }
   #trigger.active span:nth-child(1) {
     width: 100%;
-    background: var(--main-color);
     transform: translateY(8px) rotate(-45deg);
   }
   #trigger.active span:nth-child(2) {
@@ -357,7 +301,6 @@
   }
   #trigger.active span:nth-child(3) {
     width: 100%;
-    background: var(--main-color);
     transform: translateY(-8px) rotate(45deg);
   }
   #mainmenu {
@@ -371,9 +314,10 @@
     background: #fff url("../../imgs/navbg.png") center;
     background-size: cover;
     transition: all 0.4s ease-in;
+    z-index: 999;
   }
   #mainmenu.active {
-    top: 0;
+    top: 60px;
     opacity: 1;
   }
   .mainmenu__menu {
@@ -388,6 +332,9 @@
     line-height: 1;
     letter-spacing: 3px;
     text-transform: uppercase;
+  }
+  .mainmenu__menu > li > a:hover {
+    color: var(--logo-color);
   }
   .mainmenu__sns {
     display: flex;
