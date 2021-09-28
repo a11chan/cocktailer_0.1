@@ -13,7 +13,6 @@
   h2 {
     padding-top: 230px;
     font-family: "Abril Fatface", cursive;
-    font-weight: normal;
     font-size: 80px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -266,7 +265,7 @@
   }
 }
 
-@media screen and (min-width: 1050px) and (max-width: 1499px) {
+@media screen and (min-width: 1050px) and (max-width: 1449px) {
   /*HD*/
   /* ///// banner ///// */
   .banner {
@@ -308,7 +307,6 @@
     font-family: "Gowun Batang", serif;
     font-size: 42px;
     text-align: center;
-    font-weight: bold;
   }
   .first > p {
     padding-top: 5px;
@@ -532,7 +530,7 @@
   }
 }
 
-@media screen and (min-width: 720px) and (max-width: 1049px) {
+@media screen and (min-width: 660px) and (max-width: 1049px) {
   /*TB*/
   /* ///// banner ///// */
   .banner {
@@ -571,19 +569,18 @@
     font-family: "Gowun Batang", serif;
     font-size: 42px;
     text-align: center;
-    font-weight: bold;
   }
   .first > p {
+    width: 85%;
+    margin: 0 auto;
     padding-top: 5px;
     padding-bottom: 100px;
-    text-align: center;
   }
 
   /* ///// section2 ///// */
   h4 {
     font-size: 42px;
     text-align: center;
-    font-family: "Lora", serif;
   }
   .second > p,
   .third > p {
@@ -593,7 +590,7 @@
 
   /* ///// 탭 컨텐츠 ///// */
   .container {
-    width: 710px;
+    width: 80%;
     height: 915px;
     margin: 0 auto;
     margin-top: 60px;
@@ -604,7 +601,7 @@
 
   .tabs li {
     display: inline-block;
-    width: 200px;
+    width: 25%;
     height: 60px;
     padding-top: 20px;
     margin-right: 5px;
@@ -625,7 +622,7 @@
     display: none;
     clear: both;
     position: relative;
-    width: 690px;
+    width: 100%;
     height: 830px;
     padding: 70px 10px;
     background: #fff;
@@ -635,20 +632,12 @@
     display: inherit;
   }
 
-  .tab-content > img {
-    position: absolute;
-    top: 230px;
-    left: 30px;
-    width: 630px;
-    height: 390px;
-  }
   .tab-content .tab-des {
     position: absolute;
     top: 60px;
     width: 97%;
     margin: 0 auto;
   }
-
   .tab-des h5 {
     text-align: center;
     font-size: 30px;
@@ -659,12 +648,21 @@
     padding: 30px 10px;
   }
 
+  .tab-content > img {
+    position: absolute;
+    top: 230px;
+    left: 30px;
+    width: 90%;
+    height: 390px;
+  }
+
   .tab-des > table {
     position: absolute;
     top: 605px;
-    left: 35px;
+    left: 50%;
     padding: 0 10px;
-    width: 600px;
+    transform: translate(-50%);
+    width: 500px;
     height: 110px;
   }
   .con-left {
@@ -691,16 +689,15 @@
 
   .contactbox {
     position: relative;
-    width: 710px;
+    width: 80%;
     height: 600px;
     margin: 0 auto;
-    margin-bottom: 120px;
     background: url(../imgs/application-gradient-tb.jpg) repeat-x;
     border-radius: 10px;
   }
 
   .contact-us {
-    padding: 60px 70px;
+    padding: 60px 0px 45px;
     text-align: center;
   }
   .contact-us h6 {
@@ -717,7 +714,7 @@
   }
 
   .us-cont p {
-    width: 253px;
+    width: 50%;
     margin: 0 auto;
     line-height: 40px;
     text-align: center;
@@ -725,18 +722,18 @@
 
   .contactbox .app-form {
     width: 95%;
-    height: 325px;
-    padding: 50px 130px;
+    height: 340px;
+    padding: 50px 75px;
     margin: 0 auto;
     background: #fff;
     border-radius: 10px;
   }
   .app-form ul li {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     list-style: none;
   }
   .app-form ul li p {
@@ -749,10 +746,10 @@
     padding: 10px;
   }
   .app-form .leftbox {
-    width: 150px;
+    width: 95%;
   }
   .app-form .rightbox {
-    width: 250px;
+    width: 100%;
   }
 
   input[type="number"]::-webkit-inner-spin-button,
@@ -794,7 +791,7 @@
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 659px) {
   /*SM*/
   /* //// banner ///// */
 
@@ -836,7 +833,6 @@
     padding-top: 120px;
     font-family: "Gowun Batang", serif;
     font-size: 26px;
-    font-weight: bold;
     text-align: center;
   }
   .first > p {
@@ -951,7 +947,7 @@
   }
   .contact-us h6 {
     padding-bottom: 40px;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "Lora", serif;
     font-size: 20px;
     font-weight: bold;
     line-height: 32px;
