@@ -1,3 +1,9 @@
+@import "mainreset.css";
+@import "variables.css";
+
+@import "main/main.css";
+@import "main/agecheck.css";
+
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 /* font-family: 'Paytone One', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap");

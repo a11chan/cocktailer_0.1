@@ -1,13 +1,21 @@
 $(document).ready(function () {
-  // $("#age_submit").click(function () {
-  //   var inputValue = $("input[type=text]").val();
-  //   if ((parseInt(inputValue) === NaN) | (parseInt(inputValue) < 0)) {
-  //     var div = document.createElement("div");
-  //     div.innerHTML = "Please write real positive number!";
-  //     var text = $("input[type=text]");
-  //     document.body.appendChild(div);
-  //   }
-  // });
+  if (localStorage.getItem("age") === null) {
+    $("#age_check").toggleClass("none");
+    $("#age_form").submit(function (e) {
+      var age = parseInt($("#age_text").val());
+      if (age < 0 || isNaN(age)) {
+        e.preventDefault();
+        $("#age_check__alert").text("Please write real positive number");
+      } else if (age > 2002) {
+        e.preventDefault();
+        $("#age_check__alert").text("You are too young!");
+      } else {
+        localStorage.setItem("age", age);
+        $("#age_check").toggleClass("none");
+        e.preventDefault();
+      }
+    });
+  }
 
   $("#trigger").click(function (e) {
     e.preventDefault();
@@ -26,7 +34,6 @@ $(document).ready(function () {
   $(function nowBar() {
     $("div.numbox__bar__now").animate({ width: barWidth }, 7000);
     $("div.numbox__bar__now").animate({ width: 0 }, 0, nowBar);
-    // $("div.numbox__bar__now").animate({ width: 0 }, 0, nowBar);
   });
 
   // 플렉스슬라이더 모바일 스와이프 시 텍스트 변경

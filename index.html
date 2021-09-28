@@ -7,15 +7,27 @@
     <title>Cocktailer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <link rel="stylesheet" href="flexSlider/flexslider.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/mainreset.css" />
-    <link rel="stylesheet" href="css/variables.css" />
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/mainstyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="flexSlider/jquery.flexslider-min.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body>
+    <div class="none" id="age_check">
+      <div class="age_check__box">
+        <h3>welcome</h3>
+        <div>
+          <p>You have to be over <span>19</span> to enter this site.</p>
+          <p>Please enter your date of birth.</p>
+        </div>
+        <form id="age_form" autocomplete="off">
+          <input id="age_text" type="text" placeholder="YYYY" maxlength="4" required />
+          <input id="age_submit" type="submit" value="OK" />
+        </form>
+        <div id="age_check__alert" > </div>
+        <h1 class="logo">cock<span>tailer</span></h1>
+      </div>
+    </div>
     <header>
       <a href="#">
         <h1 class="logo">cock<span>tailer</span></h1>
