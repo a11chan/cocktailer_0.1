@@ -29,6 +29,8 @@ $(document).ready(function () {
     // $("div.numbox__bar__now").animate({ width: 0 }, 0, nowBar);
   });
 
+  // 플렉스슬라이더 모바일 스와이프 시 텍스트 변경
+
   // 플렉스슬라이더 버튼 클릭시 텍스트 변경
   $("a.flex-prev, a.flex-next").click(function () {
     if ($("ul.slides li").eq(1).hasClass("flex-active-slide")) {
