@@ -1,9 +1,3 @@
-@import "mainreset.css";
-@import "variables.css";
-
-@import "main/main.css";
-@import "main/agecheck.css";
-
 @import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
 /* font-family: 'Paytone One', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap");
@@ -29,5 +23,10 @@ ul li {
 }
 a {
   text-decoration: none;
-  color: var(--main-color);
+  color: #332b3b;
+}
+
+:root {
+  --logo-color: #f771d1;
+  --main-color: #332b3b;
 }

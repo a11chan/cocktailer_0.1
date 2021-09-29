@@ -1,4 +1,12 @@
 $(document).ready(function () {
+  $(document).ready(function () {
+    $("#trigger").click(function (e) {
+      e.preventDefault();
+      $(this).toggleClass("active");
+      $("#mainmenu").toggleClass("active");
+    });
+  });
+
   /* 탭메뉴*/
   $("ul.tabs li").click(function () {
     var tab_id = $(this).attr("data-tab");
