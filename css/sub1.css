@@ -13,7 +13,7 @@ a {
 .clear {
   clear: both;
 }
-section span {
+span {
   color: #f771d1;
 } /* Point Color*/
 
@@ -39,24 +39,25 @@ section span {
 
 /* ///// FHD ////// */
 @media screen and (min-width: 1450px) {
-  /* 섹션-박스 최상위 */
-  section.filterShow {
-    margin: 0 auto; padding-bottom:120px;
-    width: 1420px;
-  }
 
-  /* 섹션 타이틀 */
-  .subTitleBox {
+  /* 타이틀 박스 */
+  div.banner {
     height: 580px;
     width: 100%;
     background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
     background-size: cover;
-    /* margin-bottom: 120px; */
+    position:relative;
   }
-  .subTitle {
-    padding-top: 230px;
+  .banner::before{
+    position:absolute; top:0; right:0; bottom:0; left:0;
+    content:"";
+    opacity: .3;
+    background:#000;
+  }
+  h2.subTitle {
+    position:relative;
+    padding-top: 280px;
     font-family: "Abril Fatface", cursive;
-    font-weight: normal;
     font-size: 80px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -69,25 +70,19 @@ section span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .sub2title {
-    display:none;
-    text-align: center;
+  
+  .first > .h3_tbup {
+    position:relative;
     font-family: "Gowun Batang", serif;
-    font-size: 42px;
-    font-weight: bold;
+    font-size: 26px; text-align: center;
+    color:#fff;  
   }
-  .h3_p_hd {
-    display:none;
-    width: 490px;
-    margin: 0 auto;
-    text-align: center;
+  .first > p {
+    position:relative; padding-top:10px;
+    text-align:center; color:#fff;
   }
-  .h3_p_tbsm {
-    display: none;
-    width: 490px;
-    margin: 0 auto;
-    text-align: center;
-  }
+  .first > .h3_sm { display:none; }
+
   h4 {
     margin: 120px auto 0;
     text-align: center;
@@ -101,11 +96,15 @@ section span {
     margin-bottom:70px;
   }
 
-
+  /* body 다음 최상위 박스 */
+  section.itemFilter {
+    margin: 0 auto; padding-bottom:120px;
+    width: 1420px;
+  }
 
   /* 메인메뉴 외부 박스 */
   .filterBox {
-    width: 100%; height:450px; /*높이값 최상위 */
+    width: 100%; height:420px; /*높이값 최상위 */
     margin: 0 auto;
     padding: 10px;
     background: #f4f4f6;
@@ -114,7 +113,7 @@ section span {
   .filterBoxInner {
     position:relative;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%; height: 100%;
     margin:0 auto; padding:20px;
     background: #fff;
@@ -199,7 +198,6 @@ section span {
     height: 60px;
     background: #fff;
   }
-
   .pickingBox:nth-child(1) > li > input:checked ~ label {
     z-index: 11;
     cursor: pointer;
@@ -216,6 +214,10 @@ section span {
     width: 2px;
     height: 60px;
     background: #fff;
+  }
+
+  .r-pickingBox > li > label {
+    background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
   }
 
   /* 좌우 슬라이더-서브메뉴 모양 */
@@ -511,18 +513,24 @@ section span {
   }
 }
 
-
 /* ///// HD ///// */
 @media screen and (min-width: 1050px) and (max-width: 1449px) {
   /* 섹션 타이틀 */
-  .subTitleBox {
+  .banner {
     height: 580px;
     width: 100%;
     background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
     background-size: cover;
-    margin-bottom: 120px;
+    position:relative;
+  }
+  .banner::before{
+    position:absolute; top:0; right:0; bottom:0; left:0;
+    content:"";
+    opacity: .3;
+    background:#000;
   }
   .subTitle {
+    position:relative;
     padding-top: 230px;
     font-size: 80px;
     font-family: "Abril Fatface", cursive;
@@ -531,14 +539,6 @@ section span {
     text-transform: uppercase;
     text-align: center;
 
-    /* ↓↓↓↓↓혜수씨 세팅 따라하면 시안과 너무 달리짐↓↓↓↓↓ */
-    /* background: #FFFFFF;
-        background: -webkit-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        background: -moz-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        background: linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; */
-
     background: #ffffff;
     background: -webkit-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
     background: -moz-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
@@ -546,27 +546,22 @@ section span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .sub2title {
-    text-align: center;
+  .first > .h3_tbup {
+    position:relative;
     font-family: "Gowun Batang", serif;
-    font-size: 42px;
-    font-weight: bold;
-  }
-  .h3_p_hd {
-    /* display:none; */
-    width: 490px;
-    margin: 0 auto;
+    font-size: 26px;
     text-align: center;
+    color:#fff;
   }
-  .h3_p_tbsm {
-    display: none;
-    width: 490px;
-    margin: 0 auto;
-    text-align: center;
+  .first > p {
+    position:relative;
+    padding-top:10px; text-align:center;
+    color:#fff;
   }
+  .first > .h3_sm { display:none; }
 
   h4 {
-    margin: 200px 0 -5px;
+    margin-top:120px;
     text-align: center;
     font-family: "Lora", serif;
     font-size: 42px;
@@ -577,58 +572,62 @@ section span {
     text-align: center;
   }
 
+  /* body 다음 최상위 박스 */
+  section.itemFilter {
+    margin: 0 auto; padding: 0 20px 120px;
+    width: 100%;
+  }
+
   /* 메인메뉴 외부 박스 */
   .filterBox {
-    width: 1010px;
-    height: 726px;
-    margin: 60px auto 120px;
-    padding: 10px;
+    width: 100%; height:420px; /*높이값 최상위 */
+    margin: 70px auto 0; padding: 10px;
     background: #f4f4f6;
     border-radius: 10px;
   }
   .filterBoxInner {
-    width: 100%;
-    height: 100%;
-    padding: 30px 60px;
+    position:relative;
+    display:flex;
+    justify-content: space-evenly;
+    width: 100%; height: 100%;
+    margin:0 auto; padding:20px;
     background: #fff;
     border-radius: 10px;
   }
 
   /* 메인메뉴 모양 */
+  .pickingBox { width:46%; margin:0 auto; float:left; }
   .pickingBox > li {
     position: relative;
-    width: 100%;
     margin-bottom: 10px;
+    width:100%;
   }
-  .pickingBox > li:nth-child(4) {
-    margin-bottom: 20px;
-  }
-  .pickingBox > li:nth-child(8) {
-    margin-bottom: 30px;
-  }
-  .pickingBoxDesc,
-  .pickedBox {
+  .pickingBox > li > label { width:25%; }
+  .pickingBox > li > .pickingBoxDesc { width: 75%; }
+  .pickingBoxDesc, ul.pickedBox {
     position: absolute;
-    left: 175px;
+    left: calc(25% - 1px); /*제목 너비보다 1작게 */
     top: 0;
   }
   .pickingBoxDesc,
   .pickedBox li {
-    width: calc(981px - 287px);
     height: 62px;
     padding: 0 30px;
-    font-size: 16px;
+    font-size: 14px;
     color: #333;
-    line-height: 57px;
     border: 1px solid #f5d1e9;
     border-radius: 0 10px 10px 0;
+  }
+  .pickingBoxDesc {
+    display:flex; align-items: center;
+    padding:0 10px; word-spacing: 1px;
   }
 
   /* 블라인드 */
   .pickingBox > li > .blind2 {
     z-index: 9;
     position: absolute;
-    left: 175px;
+    left: calc(25% - 1px); /*제목 너비보다 1px 적게*/
     top: 62px;
     width: 2px;
     height: 10px;
@@ -637,7 +636,7 @@ section span {
   .pickingBox > li > .blind3 {
     z-index: 2;
     position: absolute;
-    left: 176px;
+    left: 25%; /*제목 너비와 같게*/
     top: 1px;
     width: 1px;
     height: 60px;
@@ -645,15 +644,13 @@ section span {
   }
 
   /* 메인메뉴 제목 모양 */
-  .pickingBox > li > input {
-    display: none;
-  }
+  .pickingBox > li > input { display: none; }
   .pickingBox > li > label {
     display: block;
-    width: 176px;
+    width: 25%; /* 블라인드, Desc박스 기준점*/
     height: 62px;
     z-index: 9;
-    font-size: 16px;
+    font-size: 14px;
     color: #9542bf;
     text-transform: uppercase;
     text-align: center;
@@ -663,23 +660,24 @@ section span {
     border-radius: 10px 0 0 10px;
     transition: all 0.4s ease-in;
   }
-  .pickingBox > li:nth-child(-n + 4) > label:hover {
+  .pickingBox:nth-child(1) > li > label:hover {
     z-index: 11;
     cursor: pointer;
     line-height: 60px;
     color: #333;
     background: #fff;
   }
-  .pickingBox > li:nth-child(-n + 4) > label:hover + div {
+  .pickingBox:nth-child(1) > li > label:hover + div {
     z-index: 11;
     position: absolute;
-    left: 175px;
+    left: calc(25% - 1px); /*제목 너비보다 1작게*/
     top: 1px;
     width: 2px;
     height: 60px;
     background: #fff;
   }
-  .pickingBox > li:nth-child(-n + 4) > input:checked ~ label {
+
+  .pickingBox:nth-child(1) > li > input:checked ~ label {
     z-index: 11;
     cursor: pointer;
     line-height: 60px;
@@ -687,21 +685,21 @@ section span {
     background: #fff;
     border: solid 1px #f5d1e9;
   }
-  .pickingBox > li:nth-child(-n + 4) > input:checked ~ div {
+  .pickingBox:nth-child(1) > li > input:checked ~ div {
     z-index: 11;
     position: absolute;
-    left: 175px;
+    left: calc(25% - 1px); /*제목 너비보다 1작게*/
     top: 1px;
     width: 2px;
     height: 60px;
     background: #fff;
   }
 
-  /* 서브메뉴 모양 */
+  /* 좌측 서브메뉴 모양 */
   .submenu {
     position: absolute;
     z-index: 1;
-    left: 175px;
+    left: calc(25% - 1px); /*제목 너비보다 1작게*/
     height: 278px;
     width: 0;
     overflow: hidden;
@@ -723,33 +721,29 @@ section span {
     top: -216px;
   }
 
-  /* 서브메뉴 제목 선택 후 모양 */
+  /* 좌측 서브메뉴 선택 후 모양 */
   #noseBtn:checked ~ .submenuNose {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 694px;
-    padding: 0 20px;
+    width: 75%; /*메인메뉴 제목 |너비-1|값*/
   }
   #palateBtn:checked ~ .submenuPalate {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 694px;
-    padding: 0 20px;
+    width: 75%;
   }
   #finishBtn:checked ~ .submenuFinish {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 694px;
-    padding: 0 20px;
+    width: 75%;
   }
   #typeBtn:checked ~ .submenuType {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 694px;
-    padding: 0 20px;
+    width: 75%;
   }
 
-  /* 서브메뉴 하위 항목 모양 */
+  /* 좌측 서브메뉴 제목 모양 */
   .submenu input {
     display: none;
   }
@@ -765,7 +759,7 @@ section span {
     float: left;
     padding: 10px 30px 10px 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     transition: all 0.4s ease-in;
   }
@@ -773,83 +767,16 @@ section span {
     color: #9542bf;
   }
 
-  /* submenu2 스크롤 화살표 */
-  .pickedBox .chevron {
-    z-index: 9;
-    position: absolute;
-    width: 21px;
-    height: 42px;
-    cursor: pointer;
-    transition: all 0.4s ease-in;
-  }
-  .pickedBox .chevron:hover {
-    filter: invert(0.9);
-  }
-  .pickedBox .Lchevron {
-    left: 30px;
-    background: url(../imgs/toLeft.png) no-repeat center;
-    background-size: cover;
-    filter: invert(0.5);
-  }
-  .pickedBox .Rchevron {
-    right: 30px;
-    background: url(../imgs/toRight.png) no-repeat center;
-    background-size: cover;
-    filter: invert(0.5);
-  }
-  .pickedBox .toLeft1,
-  .pickedBox .toRight1 {
-    top: 10px;
-  }
-  .pickedBox .toLeft2,
-  .pickedBox .toRight2 {
-    top: 82px;
-  }
-  .pickedBox .toLeft3,
-  .pickedBox .toRight3 {
-    top: 154px;
-  }
-  .pickedBox .toLeft4,
-  .pickedBox .toRight4 {
-    top: 226px;
-  }
 
-  /* submenu2 overflow shading box */
-  .pickedBox .shading {
-    z-index: 8;
-    position: absolute;
-    width: 70px;
-    height: 60px;
-  }
-  .pickedBox div[class*="left"] {
-    left: 1px;
-    background: linear-gradient(to right, #fff 30%, rgba(33, 33, 33, 0) 70%);
-  }
-  .pickedBox div[class*="right"] {
-    right: 1px;
-    border-radius: 0 10px 10px 0;
-    background: linear-gradient(to left, #fff 30%, rgba(33, 33, 33, 0) 70%);
-  }
-  .pickedBox div[class*="floor1"] {
-    top: 1px;
-  }
-  .pickedBox div[class*="floor2"] {
-    top: calc(1px + 72px);
-  }
-  .pickedBox div[class*="floor3"] {
-    top: calc(1px + 72px * 2);
-  }
-  .pickedBox div[class*="floor4"] {
-    top: calc(1px + 72px * 3);
-  }
-
-  /* submenu2 선택된 항목 출력 */
+  /* 우측 서브메뉴 선택된 항목 출력 박스*/
+  .pickedBox { margin:0; }
   .pickedBox > li {
     display: flex;
     align-items: center;
     overflow: hidden;
-    padding: 0 60px;
+    padding: 0 35px;
   }
+
   .pickedBox input {
     display: none;
   }
@@ -887,10 +814,59 @@ section span {
     background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
   }
 
+  .r-pickingBox > li > label {
+    background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
+  }
+
+  /* 우측 서브메뉴 스크롤 화살표 */
+  .pickedBox .chevron {
+    z-index: 9;
+    position: absolute;
+    top:50%; transform: translateY(-50%);
+    width: 15px; height:50%;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  .pickedBox .chevron:hover {
+    filter: invert(0.9);
+  }
+  .pickedBox .Lchevron {
+    left: 10px;
+    background: url(../imgs/toLeft.png) no-repeat center;
+    background-size: cover;
+    filter: invert(0.5);
+  }
+  .pickedBox .Rchevron {
+    right: 10px;
+    background: url(../imgs/toRight.png) no-repeat center;
+    background-size: cover;
+    filter: invert(0.5);
+  }
+
+
+  /* 우측서브메뉴 overflow 쉐이딩박스 */
+  .pickedBox .shading {
+    z-index: 8;
+    position: absolute;
+    width: 70px;
+    height: calc(100% - 2px);
+  }
+  .pickedBox div[class*="left"] {
+    top:1px; left:1px;
+    background: linear-gradient(to right, #fff 30%, rgba(33, 33, 33, 0) 70%);
+  }
+  .pickedBox div[class*="right"] {
+    top:1px; right:1px;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(to left, #fff 30%, rgba(33, 33, 33, 0) 70%);
+  }
+
+
   /* 조건에 맞는 럼 출력 스위치 */
   .filterBoxInner > button {
     display: block;
-    margin: 0 auto;
+    position:absolute;
+    bottom:5%; left:calc(50% - 60px);
     padding-bottom: 4px;
     width: 120px;
     height: 40px;
@@ -909,12 +885,37 @@ section span {
     border: 0;
   }
 
-  /* 럼 출력 슬라이더 모양 */
-  .itemShow {
+
+  /* 검색결과 출력 슬라이더 최상위 박스*/
+  section.itemShow {
     position: relative;
   }
+
+  /* 좌우스크롤 화살표 */
+  .Bchevron {
+    z-index: 10;
+    position: absolute;
+    bottom: calc(50% - 50px);
+    width:30px;
+    cursor: pointer;
+    filter: invert(0.7);
+    transition: all 0.4s ease-in;
+  }
+  .toLeft {
+    left: 30px;
+  }
+  .toLeft:hover {
+    filter: invert(0.1);
+  }
+  .toRight {
+    right: 30px;
+  }
+  .toRight:hover {
+    filter: invert(0.1);
+  }
+
   .carouselBox {
-    padding: 90px 75px 120px;
+    padding: 90px 260px 120px;
     height: 855px;
     width: 100%;
     text-align: center;
@@ -924,30 +925,6 @@ section span {
     background: url(../imgs/ourRumsCarouselBoxBg.png) no-repeat center;
     background-size: cover;
   }
-
-  /* 럼 출력 슬라이더 화살표*/
-  .Bchevron {
-    z-index: 9;
-    position: absolute;
-    cursor: pointer;
-    bottom: calc(50% - 50px);
-    filter: invert(0.7);
-    transition: all 0.4s ease-in;
-  }
-  .toLeft {
-    left: 130px;
-  }
-  .toLeft:hover {
-    filter: invert(0.1);
-  }
-  .toRight {
-    right: 130px;
-  }
-  .toRight:hover {
-    filter: invert(0.1);
-  }
-
-  /* 럼 출력 슬라이더 상품소개 박스 */
   .itemBox {
     display: inline-block;
     position: relative;
@@ -959,9 +936,11 @@ section span {
     border: 3px solid rgba(255, 255, 255, 0.5);
     transition: all 0.3s ease-in;
   }
+
   .itemBox:hover {
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5), 0 0 0 20px rgba(0, 0, 0, 0.5);
   }
+
   .itemBox > .itemImg {
     width: 300px;
     height: 300px;
@@ -982,6 +961,7 @@ section span {
     color: #e2e2e2;
     text-align: center;
   }
+
   .itemBox > a {
     display: block;
     margin: 0 auto;
@@ -1011,30 +991,30 @@ section span {
 
 /* ///// TB ///// */
 @media screen and (min-width: 660px) and (max-width: 1049px) {
+
   /* 섹션 타이틀 */
-  .subTitleBox {
+  .banner {
+    position:relative;
     height: 580px;
     width: 100%;
     background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
     background-size: cover;
-    margin-bottom: 120px;
+  }
+  .banner::before{
+    position:absolute; top:0; right:0; bottom:0; left:0;
+    content:"";
+    opacity: .3;
+    background:#000;
   }
   h2 {
+    position:relative;
     padding-top: 230px;
-    font-size: 60px;
+    font-size: 70px;
     text-transform: uppercase;
     text-align: center;
     font-family: "Abril Fatface", cursive;
     font-weight: normal;
     letter-spacing: 1px;
-
-    /* ↓↓↓↓↓혜수씨 세팅 따라하면 시안과 너무 달리짐↓↓↓↓↓ */
-    /* background: #FFFFFF;
-        background: -webkit-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        background: -moz-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        background: linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; */
 
     background: #ffffff;
     background: -webkit-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
@@ -1044,30 +1024,22 @@ section span {
     -webkit-text-fill-color: transparent;
   }
 
-  .sub2title {
-    width: 450px;
-    margin: 0 auto 10px;
-    text-align: center;
+  .first { position:relative; padding:0; }
+  .first > .h3_tbup {
     font-family: "Gowun Batang", serif;
-    font-size: 42px;
-    font-weight: bold;
-    line-height: 43px;
+    font-size: 26px;
+    text-align:center;
+    color:#fff;
+    text-shadow:2px 2px 5px #333;
   }
-  .h3_p_hd {
-    display: none;
-    width: 490px;
-    margin: 0 auto;
-    text-align: center;
+  .first > p {
+    text-align: center; padding: 10px 88px 0;
+    color:#fff; text-shadow:2px 2px 5px #333;
   }
-  .h3_p_tbsm {
-    /* display:none; */
-    width: 490px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
+  .first > .h3_sm { display:none; }
+  
   h4 {
-    margin: 200px 0 -5px;
+    margin: 120px 0 -5px;
     text-align: center;
     font-family: "Lora", serif;
     font-size: 42px;
@@ -1278,6 +1250,10 @@ section span {
   }
   .submenu label:hover {
     color: #9542bf;
+  }
+
+  .r-pickingBox > li > label {
+    background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
   }
 
   /* submenu2 스크롤 화살표 */
@@ -1522,29 +1498,28 @@ section span {
 /* ///// SM ///// */
 @media screen and (max-width: 659px) {
   /* 섹션 타이틀 */
-  .subTitleBox {
+  .banner {
     height: 610px;
     width: 100%;
     background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
     background-size: cover;
-    margin-bottom: 120px;
+    position:relative;
+  }
+  .banner::before{
+    position:absolute; top:0; right:0; bottom:0; left:0;
+    content:"";
+    opacity: .3;
+    background:#000;
   }
   h2 {
+    position:relative;
     padding-top: 350px;
-    font-size: 40px;
+    font-size: 45px;
     text-transform: uppercase;
     text-align: center;
+    font-family: "Abril Fatface", cursive;
     font-weight: normal;
     letter-spacing: 1px;
-    font-family: "Abril Fatface", cursive;
-
-    /* ↓↓↓↓↓혜수씨 세팅 따라하면 시안과 너무 달리짐↓↓↓↓↓ */
-    /* background: #FFFFFF;
-        background: -webkit-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        background: -moz-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        background: linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; */
 
     background: #ffffff;
     background: -webkit-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
@@ -1553,28 +1528,21 @@ section span {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-  .sub2title {
-    width: 280px;
-    margin: 0 auto 10px;
-    text-align: center;
+  .first { position:relative; }
+  .first > .h3_tbup { display:none; }
+  .first > h3 {
     font-family: "Gowun Batang", serif;
-    font-size: 26px;
-    font-weight: bold;
-    line-height: 27px; /*글자크기보다 1크게*/
+    font-size: 18px; text-align: center;
+    line-height:22px; color:#fff;
+    text-shadow: 1px 3px 3px #333;
   }
-  .h3_p_hd {
-    display: none;
-    width: 490px;
-    margin: 0 auto;
-    text-align: center;
+  .first > p {
+    width:70%; margin:0 auto; padding-top:10px;
+    color:#fff; font-size:14px;
+    text-shadow: 1px 3px 3px #333;
   }
-  .h3_p_tbsm {
-    display: none;
-    width: 490px;
-    margin: 0 auto;
-    text-align: center;
-  }
+  
+  
   h4 {
     margin: 200px 0 -5px;
     text-align: center;
@@ -1801,6 +1769,7 @@ section span {
   .pickedBox .chevron {
     z-index: 9;
     position: absolute;
+    top: 10px;
     width: 21px;
     height: 42px;
     cursor: pointer;
@@ -1821,25 +1790,10 @@ section span {
     background-size: cover;
     filter: invert(0.5);
   }
-  .pickedBox .toLeft1,
-  .pickedBox .toRight1 {
-    top: 10px;
-  }
-  .pickedBox .toLeft2,
-  .pickedBox .toRight2 {
-    top: 82px;
-  }
-  .pickedBox .toLeft3,
-  .pickedBox .toRight3 {
-    top: 154px;
-  }
-  .pickedBox .toLeft4,
-  .pickedBox .toRight4 {
-    top: 226px;
-  }
 
   /* submenu2 overflow 쉐이딩박스 */
   .pickedBox .shading {
+    top: 1px;
     z-index: 8;
     position: absolute;
     width: 30px;
@@ -1854,18 +1808,7 @@ section span {
     border-radius: 0 10px 10px 0;
     background: linear-gradient(to left, #fff 30%, rgba(33, 33, 33, 0) 70%);
   }
-  .pickedBox div[class*="floor1"] {
-    top: 1px;
-  }
-  .pickedBox div[class*="floor2"] {
-    top: calc(1px + 72px);
-  }
-  .pickedBox div[class*="floor3"] {
-    top: calc(1px + 72px * 2);
-  }
-  .pickedBox div[class*="floor4"] {
-    top: calc(1px + 72px * 3);
-  }
+
 
   /* submenu2 선택된 항목 출력 */
   .pickedBox > li {
@@ -1912,6 +1855,10 @@ section span {
     color: #9542bf;
     border: 1px solid #f5d1e9;
     background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+  }
+
+  .r-pickingBox > li > label {
+    background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
   }
 
   /* 조건에 맞는 럼 출력 스위치 */
