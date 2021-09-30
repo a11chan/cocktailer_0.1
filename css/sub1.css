@@ -121,7 +121,7 @@ span {
   }
 
   /* 메인메뉴 모양 */
-  .pickingBox { width:45%; margin:0 auto; float:left; }
+  .pickingBox { width:45%; }
   .pickingBox > li {
     position: relative;
     margin-bottom: 10px;
@@ -1095,7 +1095,7 @@ span {
   }
 
   /* 메인메뉴 윤곽 */
-  .pickingBox { width:100%; margin:0 auto; }
+  .pickingBox { width:580px; }
   .pickingBox > li {
     position: relative;
     width: 100%;
@@ -1136,7 +1136,7 @@ span {
     height: 60px;
     background: #fff;
   }
-  .pickingBox > li:nth-child(-n + 4) > label:hover + div {
+  .pickingBox:nth-child(1) > li > label:hover + div {
     z-index: 11;
     position: absolute;
     left: 149px;
@@ -1145,7 +1145,7 @@ span {
     height: 60px;
     background: #fff;
   }
-  .pickingBox > li:nth-child(-n + 4) > input:checked ~ div {
+  .pickingBox:nth-child(1) > li > input:checked ~ div {
     z-index: 11;
     position: absolute;
     left: 149px;
@@ -1178,7 +1178,7 @@ span {
     border-radius: 10px 0 0 10px;
     transition: all 0.4s ease-in;
   }
-  .pickingBox > li:nth-child(-n + 4) > label:hover {
+  .pickingBox:nth-child(1) > li > label:hover {
     z-index: 11;
     cursor: pointer;
     line-height: 60px;
@@ -1186,7 +1186,7 @@ span {
     background: #fff;
   }
 
-  .pickingBox > li:nth-child(-n + 4) > input:checked ~ label {
+  .pickingBox:nth-child(1) > li > input:checked ~ label {
     z-index: 11;
     cursor: pointer;
     line-height: 60px;
@@ -1200,9 +1200,6 @@ span {
     position: absolute;
     z-index: 1;
     left: 149px; /*메인메뉴 제목 너비보다 1 작게*/
-    /* display:none; */
-    /* padding:0 20px; */
-    /* width:981px; */
     height: 278px;
     width: 0;
     overflow: hidden;
@@ -1274,13 +1271,12 @@ span {
     color: #9542bf;
   }
 
+
+  /* 하단 서브메뉴 모양 */
   .r-pickingBox > li > label {
     background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
   }
-
-
-  /* 하단 서브메뉴 모양 */
-  .pickedBox {
+  .r-pickingBox > li > ul.pickedBox {
     position: absolute;
     top: 0;
     left: 149px; /*메인메뉴 제목 너비보다 1px작게*/
@@ -1295,12 +1291,12 @@ span {
     border-radius: 0 10px 10px 0;
   }
 
-  /* submenu2 스크롤 화살표 */
+  /* 하단 서브메뉴 스크롤 화살표 */
   .pickedBox .chevron {
+    top: calc(50% - 21px);
     z-index: 9;
     position: absolute;
-    width: 21px;
-    height: 42px;
+    width: 21px; height: 42px;
     cursor: pointer;
     transition: all 0.4s ease-in;
   }
@@ -1319,25 +1315,10 @@ span {
     background-size: cover;
     filter: invert(0.5);
   }
-  .pickedBox .toLeft1,
-  .pickedBox .toRight1 {
-    top: 10px;
-  }
-  .pickedBox .toLeft2,
-  .pickedBox .toRight2 {
-    top: 82px;
-  }
-  .pickedBox .toLeft3,
-  .pickedBox .toRight3 {
-    top: 154px;
-  }
-  .pickedBox .toLeft4,
-  .pickedBox .toRight4 {
-    top: 226px;
-  }
 
-  /* submenu2 overflow shading box */
+  /* 하단 서브메뉴 overflow 쉐이딩박스 */
   .pickedBox .shading {
+    top: 1px;
     z-index: 8;
     position: absolute;
     width: 70px;
@@ -1351,18 +1332,6 @@ span {
     right: 1px;
     border-radius: 0 10px 10px 0;
     background: linear-gradient(to left, #fff 30%, rgba(33, 33, 33, 0) 70%);
-  }
-  .pickedBox div[class*="floor1"] {
-    top: 1px;
-  }
-  .pickedBox div[class*="floor2"] {
-    top: calc(1px + 72px);
-  }
-  .pickedBox div[class*="floor3"] {
-    top: calc(1px + 72px * 2);
-  }
-  .pickedBox div[class*="floor4"] {
-    top: calc(1px + 72px * 3);
   }
 
   /* submenu2 선택된 항목 출력 */
