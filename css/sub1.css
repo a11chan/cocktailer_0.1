@@ -367,6 +367,11 @@ span {
     cursor: pointer;
     transition: all 0.4s ease-in;
   }
+  .pickedBox label:hover {
+    color: #9542bf;
+    border: 1px solid transparent;
+    background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
+  }
   .pickedBox label::after {
     position: absolute;
     top: 10px;
@@ -380,11 +385,7 @@ span {
     background: #333;
     border-radius: 50%;
   }
-  .pickedBox label:hover {
-    color: #9542bf;
-    border: 1px solid #f5d1e9;
-    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
-  }
+
 
 
   /* 조건에 맞는 럼 출력 스위치 */
@@ -769,7 +770,7 @@ span {
 
 
   /* 우측 서브메뉴 선택된 항목 출력 박스*/
-  .pickedBox { margin:0; }
+  .pickedBox { margin:0; display:flex; }
   .pickedBox > li {
     display: flex;
     align-items: center;
@@ -810,8 +811,8 @@ span {
   }
   .pickedBox label:hover {
     color: #9542bf;
-    border: 1px solid #f5d1e9;
-    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+    border: 1px solid transparent;
+    background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
   }
 
   .r-pickingBox > li > label {
@@ -1050,24 +1051,32 @@ span {
     text-align: center;
   }
 
+ /* body 다음 최상위 박스 */
+  section.itemFilter {
+  margin: 0 auto; padding: 0 20px 120px;
+  width: 100%;
+}
+
   /* 메인메뉴 외부 박스 */
   .filterBox {
-    width: 640px;
-    height: 720px;
-    margin: 60px auto 120px;
-    padding: 10px;
+    width: 100%; height: 720px;
+    margin: 70px auto 0; padding: 10px;
     background: #f4f4f6;
     border-radius: 10px;
   }
   .filterBoxInner {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
+    position:relative;
+    /* display:flex;
+    flex-direction:column;
+    align-items:center; */
+    width: 100%; height: 100%;
+    margin:0 auto; padding: 20px;
     background: #fff;
     border-radius: 10px;
   }
 
   /* 메인메뉴 윤곽 */
+  .pickingBox { width:100%; margin:0 auto; }
   .pickingBox > li {
     position: relative;
     width: 100%;
@@ -1366,8 +1375,8 @@ span {
   }
   .pickedBox label:hover {
     color: #9542bf;
-    border: 1px solid #f5d1e9;
-    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+    border: 1px solid transparent;
+    background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
   }
 
   /* 조건에 맞는 럼 출력 스위치 */
@@ -1853,8 +1862,8 @@ span {
   }
   .pickedBox label:hover {
     color: #9542bf;
-    border: 1px solid #f5d1e9;
-    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+    border: 1px solid transparent;
+    background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
   }
 
   .r-pickingBox > li > label {
