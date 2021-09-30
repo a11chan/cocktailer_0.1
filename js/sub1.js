@@ -54,7 +54,9 @@ $(document).ready(function () {
     }
 
     if (targetClass == "") {
-      chevronAll.hide();
+      chevronAll.fadeOut();
+      $(".itemShow").fadeOut();
+
     }
 
     console.log(targetClass); //함수 검증용

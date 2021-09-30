@@ -39,13 +39,19 @@ section span {
 
 /* ///// FHD ////// */
 @media screen and (min-width: 1450px) {
+  /* 섹션-박스 최상위 */
+  section.filterShow {
+    margin: 0 auto; padding-bottom:120px;
+    width: 1420px;
+  }
+
   /* 섹션 타이틀 */
   .subTitleBox {
     height: 580px;
     width: 100%;
     background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
     background-size: cover;
-    margin-bottom: 120px;
+    /* margin-bottom: 120px; */
   }
   .subTitle {
     padding-top: 230px;
@@ -56,14 +62,6 @@ section span {
     text-transform: uppercase;
     text-align: center;
 
-    /* ↓↓↓↓↓혜수씨 세팅 따라하면 시안과 너무 달리짐↓↓↓↓↓ */
-    /* background: #FFFFFF;
-        background: -webkit-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        background: -moz-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        background: linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; */
-
     background: #ffffff;
     background: -webkit-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
     background: -moz-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
@@ -72,13 +70,14 @@ section span {
     -webkit-text-fill-color: transparent;
   }
   .sub2title {
+    display:none;
     text-align: center;
     font-family: "Gowun Batang", serif;
     font-size: 42px;
     font-weight: bold;
   }
   .h3_p_hd {
-    /* display:none; */
+    display:none;
     width: 490px;
     margin: 0 auto;
     text-align: center;
@@ -90,7 +89,7 @@ section span {
     text-align: center;
   }
   h4 {
-    margin: 200px 0 -5px;
+    margin: 120px auto 0;
     text-align: center;
     font-family: "Lora", serif;
     font-size: 42px;
@@ -99,29 +98,33 @@ section span {
   }
   .h4_p {
     text-align: center;
+    margin-bottom:70px;
   }
+
+
 
   /* 메인메뉴 외부 박스 */
   .filterBox {
-    width: 1300px;
-    height: 726px;
-    margin: 60px auto 120px;
+    width: 100%; height:450px; /*높이값 최상위 */
+    margin: 0 auto;
     padding: 10px;
     background: #f4f4f6;
     border-radius: 10px;
   }
   .filterBoxInner {
-    width: 1280px;
-    height: 706px;
-    padding: 30px 60px;
+    position:relative;
+    width: 100%; height: 100%;
+    margin:0 auto; padding: 2%;
     background: #fff;
     border-radius: 10px;
   }
 
   /* 메인메뉴 모양 */
+  #pickingBox { width:100%; }
   #pickingBox > li {
     position: relative;
     margin-bottom: 10px;
+    width:45%;
   }
   #pickingBox > li:nth-child(4) {
     margin-bottom: 20px;
@@ -129,15 +132,13 @@ section span {
   #pickingBox > li:nth-child(8) {
     margin-bottom: 30px;
   }
-  .pickingBoxDesc,
-  .pickedBox {
+  .pickingBoxDesc, .pickedBox {
     position: absolute;
     left: 175px;
     top: 0;
   }
   .pickingBoxDesc,
   .pickedBox li {
-    width: 981px;
     height: 62px;
     padding: 0 30px;
     font-size: 16px;
@@ -168,9 +169,7 @@ section span {
   }
 
   /* 메인메뉴 제목 모양 */
-  #pickingBox > li > input {
-    display: none;
-  }
+  #pickingBox > li > input { display: none; }
   #pickingBox > li > label {
     display: block;
     width: 176px;
@@ -251,25 +250,25 @@ section span {
   #noseBtn:checked ~ .submenuNose {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 981px;
+    width: 40%;
     padding: 0 20px;
   }
   #palateBtn:checked ~ .submenuPalate {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 981px;
+    width: 100%;
     padding: 0 20px;
   }
   #finishBtn:checked ~ .submenuFinish {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 981px;
+    width: 100%;
     padding: 0 20px;
   }
   #typeBtn:checked ~ .submenuType {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 981px;
+    width: 100%;
     padding: 0 20px;
   }
 
@@ -301,8 +300,7 @@ section span {
   .pickedBox .chevron {
     z-index: 9;
     position: absolute;
-    width: 21px;
-    height: 42px;
+    width: 10px;
     cursor: pointer;
     transition: all 0.4s ease-in;
   }
@@ -414,7 +412,8 @@ section span {
   /* 조건에 맞는 럼 출력 스위치 */
   .filterBoxInner > button {
     display: block;
-    margin: 0 auto;
+    position:absolute;
+    bottom:5%; left:calc(50% - 60px);
     padding-bottom: 4px;
     width: 120px;
     height: 40px;
@@ -440,8 +439,9 @@ section span {
   .Bchevron {
     z-index: 9;
     position: absolute;
-    cursor: pointer;
     bottom: calc(50% - 50px);
+    width:25px;
+    cursor: pointer;
     filter: invert(0.7);
     transition: all 0.4s ease-in;
   }
