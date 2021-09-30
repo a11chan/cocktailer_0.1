@@ -597,21 +597,20 @@ span {
   }
 
   /* 메인메뉴 모양 */
-  .pickingBox { width:46%; margin:0 auto; float:left; }
+  .pickingBox { width:450px;}
   .pickingBox > li {
     position: relative;
     margin-bottom: 10px;
     width:100%;
   }
-  .pickingBox > li > label { width:25%; }
-  .pickingBox > li > .pickingBoxDesc { width: 75%; }
-  .pickingBoxDesc, ul.pickedBox {
+  .pickingBox > li > label { width:20%; }
+  .pickingBox > li > .pickingBoxDesc { width:360px; }
+  .pickingBoxDesc {
     position: absolute;
-    left: calc(25% - 1px); /*제목 너비보다 1작게 */
+    left: calc(20% - 1px); /*제목 너비보다 1작게 */
     top: 0;
   }
-  .pickingBoxDesc,
-  .pickedBox li {
+  .pickingBoxDesc {
     height: 62px;
     padding: 0 30px;
     font-size: 14px;
@@ -624,11 +623,13 @@ span {
     padding:0 10px; word-spacing: 1px;
   }
 
+  
+
   /* 블라인드 */
   .pickingBox > li > .blind2 {
     z-index: 9;
     position: absolute;
-    left: calc(25% - 1px); /*제목 너비보다 1px 적게*/
+    left: calc(20% - 1px); /*제목 너비보다 1px 적게*/
     top: 62px;
     width: 2px;
     height: 10px;
@@ -637,7 +638,7 @@ span {
   .pickingBox > li > .blind3 {
     z-index: 2;
     position: absolute;
-    left: 25%; /*제목 너비와 같게*/
+    left: 20%; /*제목 너비와 같게*/
     top: 1px;
     width: 1px;
     height: 60px;
@@ -648,7 +649,7 @@ span {
   .pickingBox > li > input { display: none; }
   .pickingBox > li > label {
     display: block;
-    width: 25%; /* 블라인드, Desc박스 기준점*/
+    width: 20%; /* 블라인드, Desc박스 기준점*/
     height: 62px;
     z-index: 9;
     font-size: 14px;
@@ -671,7 +672,7 @@ span {
   .pickingBox:nth-child(1) > li > label:hover + div {
     z-index: 11;
     position: absolute;
-    left: calc(25% - 1px); /*제목 너비보다 1작게*/
+    left: calc(20% - 1px); /*제목 너비보다 1작게*/
     top: 1px;
     width: 2px;
     height: 60px;
@@ -689,7 +690,7 @@ span {
   .pickingBox:nth-child(1) > li > input:checked ~ div {
     z-index: 11;
     position: absolute;
-    left: calc(25% - 1px); /*제목 너비보다 1작게*/
+    left: calc(20% - 1px); /*제목 너비보다 1작게*/
     top: 1px;
     width: 2px;
     height: 60px;
@@ -700,7 +701,7 @@ span {
   .submenu {
     position: absolute;
     z-index: 1;
-    left: calc(25% - 1px); /*제목 너비보다 1작게*/
+    left: calc(20% - 1px); /*제목 너비보다 1작게*/
     height: 278px;
     width: 0;
     overflow: hidden;
@@ -726,22 +727,22 @@ span {
   #noseBtn:checked ~ .submenuNose {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 75%; /*메인메뉴 제목 |너비-1|값*/
+    width: 360px; /*메인메뉴 제목 |너비-1|값*/
   }
   #palateBtn:checked ~ .submenuPalate {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 75%;
+    width: 360px;
   }
   #finishBtn:checked ~ .submenuFinish {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 75%;
+    width: 360px;
   }
   #typeBtn:checked ~ .submenuType {
     z-index: 10;
     border: 1px solid #f5d1e9;
-    width: 75%;
+    width: 360px;
   }
 
   /* 좌측 서브메뉴 제목 모양 */
@@ -770,8 +771,27 @@ span {
 
 
   /* 우측 서브메뉴 선택된 항목 출력 박스*/
-  .pickedBox { margin:0; display:flex; }
+  .r-pickingBox { width:450px; }
+  .r-pickingBox > li > label {
+    background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
+  }
+  .r-pickingBox > li > .pickedBox {
+    position: absolute;
+    display:flex; /* 하위 li들 정렬용 */
+    left: calc(20% - 1px); /*제목 너비보다 1작게 */
+    top: 0;
+  }
+  .r-pickingBox > li > .pickedBox li {
+    height: 62px;
+    padding: 0 30px;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #f5d1e9;
+    border-radius: 0 10px 10px 0;
+  }
   .pickedBox > li {
+    width:360px;
+    flex-wrap:nowrap;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -781,7 +801,7 @@ span {
   .pickedBox input {
     display: none;
   }
-  .pickedBox label {
+  .pickedBox li label {
     position: relative;
     margin-right: 15px;
     height: 42px;
@@ -796,7 +816,7 @@ span {
     cursor: pointer;
     transition: all 0.4s ease-in;
   }
-  .pickedBox label::after {
+  .pickedBox li label::after {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -809,15 +829,13 @@ span {
     background: #333;
     border-radius: 50%;
   }
-  .pickedBox label:hover {
+  .pickedBox li label:hover {
     color: #9542bf;
     border: 1px solid transparent;
     background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
   }
 
-  .r-pickingBox > li > label {
-    background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
-  }
+
 
   /* 우측 서브메뉴 스크롤 화살표 */
   .pickedBox .chevron {
@@ -1059,16 +1077,17 @@ span {
 
   /* 메인메뉴 외부 박스 */
   .filterBox {
-    width: 100%; height: 720px;
+    width: 100%; height: 750px;
     margin: 70px auto 0; padding: 10px;
     background: #f4f4f6;
     border-radius: 10px;
   }
   .filterBoxInner {
     position:relative;
-    /* display:flex;
+    display:flex;
     flex-direction:column;
-    align-items:center; */
+    justify-content:space-evenly;
+    align-items:center;
     width: 100%; height: 100%;
     margin:0 auto; padding: 20px;
     background: #fff;
@@ -1082,19 +1101,12 @@ span {
     width: 100%;
     margin-bottom: 10px;
   }
-  .pickingBox > li:nth-child(4) {
-    margin-bottom: 20px;
-  }
-  .pickingBox > li:nth-child(8) {
-    margin-bottom: 30px;
-  }
-  .pickingBoxDesc, .pickedBox {
+  .pickingBoxDesc {
     position: absolute;
     top: 0;
-    left: 149px;
-  } /*메인메뉴 제목 너비보다 1px작게*/
-  .pickingBoxDesc,
-  .pickedBox li {
+    left: 149px; /*메인메뉴 제목 너비보다 1px작게*/
+  }
+  .pickingBoxDesc {
     width: 430px;
     height: 62px;
     padding: 0 20px;
@@ -1103,6 +1115,7 @@ span {
     border: 1px solid #f5d1e9;
     border-radius: 0 10px 10px 0;
   }
+  
 
   /* 메인&서브메뉴 사이 블라인드 */
   .pickingBox > li > .blind2 {
@@ -1253,7 +1266,7 @@ span {
     float: left;
     padding: 10px 30px 10px 10px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 16px;
     text-transform: uppercase;
     transition: all 0.4s ease-in;
   }
@@ -1263,6 +1276,23 @@ span {
 
   .r-pickingBox > li > label {
     background: linear-gradient(to bottom, #FAD6E0 10%, #eeccec 95%);
+  }
+
+
+  /* 하단 서브메뉴 모양 */
+  .pickedBox {
+    position: absolute;
+    top: 0;
+    left: 149px; /*메인메뉴 제목 너비보다 1px작게*/
+  } 
+  .pickedBox li {
+    width: 430px;
+    height: 62px;
+    padding: 0 20px;
+    color: #333;
+    line-height: 57px;
+    border: 1px solid #f5d1e9;
+    border-radius: 0 10px 10px 0;
   }
 
   /* submenu2 스크롤 화살표 */
