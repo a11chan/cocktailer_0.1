@@ -1,0 +1,2068 @@
+@charset "utf-8";
+
+/* common style */
+ul li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+}
+.clear {
+  clear: both;
+}
+section span {
+  color: #f771d1;
+} /* Point Color*/
+
+/* LOGO FONT */
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+/* font-family: 'Paytone One', sans-serif; */
+
+/* <h2> FONT */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+/* font-family: 'Abril Fatface', cursive; */
+
+/* <h3> FONT */
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap");
+/* font-family: 'Gowun Batang', serif; */
+
+/* <h4> FONT */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
+/* font-family: 'Lora', serif; */
+
+/* body FONT */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* ///// FHD ////// */
+@media screen and (min-width: 1450px) {
+  /* 섹션 타이틀 */
+  .subTitleBox {
+    height: 580px;
+    width: 100%;
+    background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
+    background-size: cover;
+    margin-bottom: 120px;
+  }
+  .subTitle {
+    padding-top: 230px;
+    font-family: "Abril Fatface", cursive;
+    font-weight: normal;
+    font-size: 80px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+
+    /* ↓↓↓↓↓혜수씨 세팅 따라하면 시안과 너무 달리짐↓↓↓↓↓ */
+    /* background: #FFFFFF;
+        background: -webkit-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        background: -moz-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        background: linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+
+    background: #ffffff;
+    background: -webkit-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    background: -moz-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    background: linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .sub2title {
+    text-align: center;
+    font-family: "Gowun Batang", serif;
+    font-size: 42px;
+    font-weight: bold;
+  }
+  .h3_p_hd {
+    /* display:none; */
+    width: 490px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .h3_p_tbsm {
+    display: none;
+    width: 490px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  h4 {
+    margin: 200px 0 -5px;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .h4_p {
+    text-align: center;
+  }
+
+  /* 메인메뉴 외부 박스 */
+  .filterBox {
+    width: 1300px;
+    height: 726px;
+    margin: 60px auto 120px;
+    padding: 10px;
+    background: #f4f4f6;
+    border-radius: 10px;
+  }
+  .filterBoxInner {
+    width: 1280px;
+    height: 706px;
+    padding: 30px 60px;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  /* 메인메뉴 모양 */
+  #pickingBox > li {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  #pickingBox > li:nth-child(4) {
+    margin-bottom: 20px;
+  }
+  #pickingBox > li:nth-child(8) {
+    margin-bottom: 30px;
+  }
+  .pickingBoxDesc,
+  .pickedBox {
+    position: absolute;
+    left: 175px;
+    top: 0;
+  }
+  .pickingBoxDesc,
+  .pickedBox li {
+    width: 981px;
+    height: 62px;
+    padding: 0 30px;
+    font-size: 16px;
+    color: #333;
+    line-height: 57px;
+    border: 1px solid #f5d1e9;
+    border-radius: 0 10px 10px 0;
+  }
+
+  /* 블라인드 */
+  #pickingBox > li > .blind2 {
+    z-index: 9;
+    position: absolute;
+    left: 175px;
+    top: 62px;
+    width: 2px;
+    height: 10px;
+    background: #fff;
+  }
+  #pickingBox > li > .blind3 {
+    z-index: 2;
+    position: absolute;
+    left: 176px;
+    top: 1px;
+    width: 1px;
+    height: 60px;
+    background: #fff;
+  }
+
+  /* 메인메뉴 제목 모양 */
+  #pickingBox > li > input {
+    display: none;
+  }
+  #pickingBox > li > label {
+    display: block;
+    width: 176px;
+    height: 62px;
+    z-index: 9;
+    font-size: 16px;
+    color: #9542bf;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+    border: solid 1px #f5d1e9;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.4s ease-in;
+  }
+  #pickingBox > li:nth-child(-n + 4) > label:hover {
+    z-index: 11;
+    cursor: pointer;
+    line-height: 60px;
+    color: #333;
+    background: #fff;
+  }
+  #pickingBox > li:nth-child(-n + 4) > label:hover + div {
+    z-index: 11;
+    position: absolute;
+    left: 175px;
+    top: 1px;
+    width: 2px;
+    height: 60px;
+    background: #fff;
+  }
+
+  #pickingBox > li:nth-child(-n + 4) > input:checked ~ label {
+    z-index: 11;
+    cursor: pointer;
+    line-height: 60px;
+    color: #333;
+    background: #fff;
+    border: solid 1px #f5d1e9;
+  }
+  #pickingBox > li:nth-child(-n + 4) > input:checked ~ div {
+    z-index: 11;
+    position: absolute;
+    left: 175px;
+    top: 1px;
+    width: 2px;
+    height: 60px;
+    background: #fff;
+  }
+
+  /* 서브메뉴 모양 */
+  .submenu {
+    position: absolute;
+    z-index: 1;
+    left: 175px;
+    height: 278px;
+    width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f5d1e9; /* 얘를 가리기 위한 블라인드 필요, 전체 길이에 추가됨*/
+    border-radius: 0 10px 10px 0;
+    transition: all 0.4s ease-in; /* 작동 안하는 이유 불명 */
+  }
+  .submenuNose {
+    top: 0;
+  }
+  .submenuPalate {
+    top: -72px;
+  }
+  .submenuFinish {
+    top: -144px;
+  }
+  .submenuType {
+    top: -216px;
+  }
+
+  /* 서브메뉴 선택 후 모양 */
+  #noseBtn:checked ~ .submenuNose {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 981px;
+    padding: 0 20px;
+  }
+  #palateBtn:checked ~ .submenuPalate {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 981px;
+    padding: 0 20px;
+  }
+  #finishBtn:checked ~ .submenuFinish {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 981px;
+    padding: 0 20px;
+  }
+  #typeBtn:checked ~ .submenuType {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 981px;
+    padding: 0 20px;
+  }
+
+  /* 서브메뉴 내부 컨텐츠 */
+  .submenu input {
+    display: none;
+  }
+  .submenu input:checked + label {
+    color: #9542bf;
+    text-shadow: 0 0 2px #9542bf;
+  }
+  .submenu label {
+    float: left;
+  }
+  .submenu label {
+    display: block;
+    float: left;
+    padding: 10px 30px 10px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in;
+  }
+  .submenu label:hover {
+    color: #9542bf;
+  }
+
+  /* submenu2 스크롤 화살표 */
+  .pickedBox .chevron {
+    z-index: 9;
+    position: absolute;
+    width: 21px;
+    height: 42px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  .pickedBox .chevron:hover {
+    filter: invert(0.9);
+  }
+  .pickedBox .Lchevron {
+    left: 30px;
+    background: url(../imgs/toLeft.png) no-repeat center;
+    background-size: cover;
+    filter: invert(0.5);
+  }
+  .pickedBox .Rchevron {
+    right: 30px;
+    background: url(../imgs/toRight.png) no-repeat center;
+    background-size: cover;
+    filter: invert(0.5);
+  }
+  .pickedBox .toLeft1,
+  .pickedBox .toRight1 {
+    top: 10px;
+  }
+  .pickedBox .toLeft2,
+  .pickedBox .toRight2 {
+    top: 82px;
+  }
+  .pickedBox .toLeft3,
+  .pickedBox .toRight3 {
+    top: 154px;
+  }
+  .pickedBox .toLeft4,
+  .pickedBox .toRight4 {
+    top: 226px;
+  }
+
+  /* submenu2 overflow shading box */
+  .pickedBox .shading {
+    z-index: 8;
+    position: absolute;
+    width: 70px;
+    height: 60px;
+  }
+  .pickedBox div[class*="left"] {
+    left: 1px;
+    background: linear-gradient(to right, #fff 30%, rgba(33, 33, 33, 0) 70%);
+  }
+  .pickedBox div[class*="right"] {
+    right: 1px;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(to left, #fff 30%, rgba(33, 33, 33, 0) 70%);
+  }
+  .pickedBox div[class*="floor1"] {
+    top: 1px;
+  }
+  .pickedBox div[class*="floor2"] {
+    top: calc(1px + 72px);
+  }
+  .pickedBox div[class*="floor3"] {
+    top: calc(1px + 72px * 2);
+  }
+  .pickedBox div[class*="floor4"] {
+    top: calc(1px + 72px * 3);
+  }
+
+  /* submenu2 선택된 항목 출력 */
+  .pickedBox > li {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 60px;
+  }
+  .pickedBox input {
+    display: none;
+  }
+  .pickedBox label {
+    position: relative;
+    margin-right: 15px;
+    height: 42px;
+    padding: 5px 50px 5px 20px;
+    line-height: 27px;
+    white-space: nowrap;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #9542bf;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  .pickedBox label::after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    content: "×";
+    color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+  }
+  .pickedBox label:hover {
+    color: #9542bf;
+    border: 1px solid #f5d1e9;
+    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+  }
+
+  /* 조건에 맞는 럼 출력 스위치 */
+  .filterBoxInner > button {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 4px;
+    width: 120px;
+    height: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-transform: capitalize;
+    background: #fff;
+    border: 2px solid #808292;
+  }
+  .filterBoxInner > button:hover {
+    color: #fff;
+    background: #808292;
+    border: 0;
+  }
+
+  /* 럼 출력 슬라이더 */
+  .itemShow {
+    position: relative;
+  }
+  .Bchevron {
+    z-index: 9;
+    position: absolute;
+    cursor: pointer;
+    bottom: calc(50% - 50px);
+    filter: invert(0.7);
+    transition: all 0.4s ease-in;
+  }
+  .toLeft {
+    left: 130px;
+  }
+  .toLeft:hover {
+    filter: invert(0.1);
+  }
+  .toRight {
+    right: 130px;
+  }
+  .toRight:hover {
+    filter: invert(0.1);
+  }
+
+  .carouselBox {
+    padding: 90px 260px 120px;
+    height: 855px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    background: url(../imgs/ourRumsCarouselBoxBg.png) no-repeat center;
+    background-size: cover;
+  }
+  .itemBox {
+    display: inline-block;
+    position: relative;
+    padding: 50px;
+    margin: auto 25px;
+    width: 400px;
+    height: 645px;
+    border-radius: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in;
+  }
+
+  .itemBox:hover {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5), 0 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .itemBox > .itemImg {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 45px;
+    border-radius: 300px;
+    object-fit: cover;
+  }
+  .itemBox > h5 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #e2e2e2;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .itemBox > p {
+    white-space: normal;
+    font-size: 16px;
+    color: #e2e2e2;
+    text-align: center;
+  }
+
+  .itemBox > a {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: calc(50% - 75px);
+    bottom: 50px;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 47px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    box-shadow: 2px 2px 3px 2px rgba(3, 3, 3, 0.5);
+    transition: all 0.3s ease-in;
+  }
+  .itemBox > a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.2) inset, 1px 1px 3px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(188, 188, 188, 0.5);
+  }
+}
+
+/* ///// HD ///// */
+@media screen and (min-width: 1050px) and (max-width: 1449px) {
+  /* 섹션 타이틀 */
+  .subTitleBox {
+    height: 580px;
+    width: 100%;
+    background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
+    background-size: cover;
+    margin-bottom: 120px;
+  }
+  .subTitle {
+    padding-top: 230px;
+    font-size: 80px;
+    font-family: "Abril Fatface", cursive;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+
+    /* ↓↓↓↓↓혜수씨 세팅 따라하면 시안과 너무 달리짐↓↓↓↓↓ */
+    /* background: #FFFFFF;
+        background: -webkit-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        background: -moz-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        background: linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+
+    background: #ffffff;
+    background: -webkit-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    background: -moz-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    background: linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .sub2title {
+    text-align: center;
+    font-family: "Gowun Batang", serif;
+    font-size: 42px;
+    font-weight: bold;
+  }
+  .h3_p_hd {
+    /* display:none; */
+    width: 490px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .h3_p_tbsm {
+    display: none;
+    width: 490px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h4 {
+    margin: 200px 0 -5px;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .h4_p {
+    text-align: center;
+  }
+
+  /* 메인메뉴 외부 박스 */
+  .filterBox {
+    width: 1010px;
+    height: 726px;
+    margin: 60px auto 120px;
+    padding: 10px;
+    background: #f4f4f6;
+    border-radius: 10px;
+  }
+  .filterBoxInner {
+    width: 100%;
+    height: 100%;
+    padding: 30px 60px;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  /* 메인메뉴 모양 */
+  #pickingBox > li {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #pickingBox > li:nth-child(4) {
+    margin-bottom: 20px;
+  }
+  #pickingBox > li:nth-child(8) {
+    margin-bottom: 30px;
+  }
+  .pickingBoxDesc,
+  .pickedBox {
+    position: absolute;
+    left: 175px;
+    top: 0;
+  }
+  .pickingBoxDesc,
+  .pickedBox li {
+    width: calc(981px - 287px);
+    height: 62px;
+    padding: 0 30px;
+    font-size: 16px;
+    color: #333;
+    line-height: 57px;
+    border: 1px solid #f5d1e9;
+    border-radius: 0 10px 10px 0;
+  }
+
+  /* 블라인드 */
+  #pickingBox > li > .blind2 {
+    z-index: 9;
+    position: absolute;
+    left: 175px;
+    top: 62px;
+    width: 2px;
+    height: 10px;
+    background: #fff;
+  }
+  #pickingBox > li > .blind3 {
+    z-index: 2;
+    position: absolute;
+    left: 176px;
+    top: 1px;
+    width: 1px;
+    height: 60px;
+    background: #fff;
+  }
+
+  /* 메인메뉴 제목 모양 */
+  #pickingBox > li > input {
+    display: none;
+  }
+  #pickingBox > li > label {
+    display: block;
+    width: 176px;
+    height: 62px;
+    z-index: 9;
+    font-size: 16px;
+    color: #9542bf;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+    border: solid 1px #f5d1e9;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.4s ease-in;
+  }
+  #pickingBox > li:nth-child(-n + 4) > label:hover {
+    z-index: 11;
+    cursor: pointer;
+    line-height: 60px;
+    color: #333;
+    background: #fff;
+  }
+  #pickingBox > li:nth-child(-n + 4) > label:hover + div {
+    z-index: 11;
+    position: absolute;
+    left: 175px;
+    top: 1px;
+    width: 2px;
+    height: 60px;
+    background: #fff;
+  }
+  #pickingBox > li:nth-child(-n + 4) > input:checked ~ label {
+    z-index: 11;
+    cursor: pointer;
+    line-height: 60px;
+    color: #333;
+    background: #fff;
+    border: solid 1px #f5d1e9;
+  }
+  #pickingBox > li:nth-child(-n + 4) > input:checked ~ div {
+    z-index: 11;
+    position: absolute;
+    left: 175px;
+    top: 1px;
+    width: 2px;
+    height: 60px;
+    background: #fff;
+  }
+
+  /* 서브메뉴 모양 */
+  .submenu {
+    position: absolute;
+    z-index: 1;
+    left: 175px;
+    height: 278px;
+    width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f5d1e9; /* 얘를 가리기 위한 블라인드 필요, 전체 길이에 추가됨*/
+    border-radius: 0 10px 10px 0;
+    transition: all 0.4s ease-in; /* 작동 안하는 이유 불명 */
+  }
+  .submenuNose {
+    top: 0;
+  }
+  .submenuPalate {
+    top: -72px;
+  }
+  .submenuFinish {
+    top: -144px;
+  }
+  .submenuType {
+    top: -216px;
+  }
+
+  /* 서브메뉴 제목 선택 후 모양 */
+  #noseBtn:checked ~ .submenuNose {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 694px;
+    padding: 0 20px;
+  }
+  #palateBtn:checked ~ .submenuPalate {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 694px;
+    padding: 0 20px;
+  }
+  #finishBtn:checked ~ .submenuFinish {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 694px;
+    padding: 0 20px;
+  }
+  #typeBtn:checked ~ .submenuType {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 694px;
+    padding: 0 20px;
+  }
+
+  /* 서브메뉴 하위 항목 모양 */
+  .submenu input {
+    display: none;
+  }
+  .submenu input:checked + label {
+    color: #9542bf;
+    text-shadow: 0 0 2px #9542bf;
+  }
+  .submenu label {
+    float: left;
+  }
+  .submenu label {
+    display: block;
+    float: left;
+    padding: 10px 30px 10px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in;
+  }
+  .submenu label:hover {
+    color: #9542bf;
+  }
+
+  /* submenu2 스크롤 화살표 */
+  .pickedBox .chevron {
+    z-index: 9;
+    position: absolute;
+    width: 21px;
+    height: 42px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  .pickedBox .chevron:hover {
+    filter: invert(0.9);
+  }
+  .pickedBox .Lchevron {
+    left: 30px;
+    background: url(../imgs/toLeft.png) no-repeat center;
+    background-size: cover;
+    filter: invert(0.5);
+  }
+  .pickedBox .Rchevron {
+    right: 30px;
+    background: url(../imgs/toRight.png) no-repeat center;
+    background-size: cover;
+    filter: invert(0.5);
+  }
+  .pickedBox .toLeft1,
+  .pickedBox .toRight1 {
+    top: 10px;
+  }
+  .pickedBox .toLeft2,
+  .pickedBox .toRight2 {
+    top: 82px;
+  }
+  .pickedBox .toLeft3,
+  .pickedBox .toRight3 {
+    top: 154px;
+  }
+  .pickedBox .toLeft4,
+  .pickedBox .toRight4 {
+    top: 226px;
+  }
+
+  /* submenu2 overflow shading box */
+  .pickedBox .shading {
+    z-index: 8;
+    position: absolute;
+    width: 70px;
+    height: 60px;
+  }
+  .pickedBox div[class*="left"] {
+    left: 1px;
+    background: linear-gradient(to right, #fff 30%, rgba(33, 33, 33, 0) 70%);
+  }
+  .pickedBox div[class*="right"] {
+    right: 1px;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(to left, #fff 30%, rgba(33, 33, 33, 0) 70%);
+  }
+  .pickedBox div[class*="floor1"] {
+    top: 1px;
+  }
+  .pickedBox div[class*="floor2"] {
+    top: calc(1px + 72px);
+  }
+  .pickedBox div[class*="floor3"] {
+    top: calc(1px + 72px * 2);
+  }
+  .pickedBox div[class*="floor4"] {
+    top: calc(1px + 72px * 3);
+  }
+
+  /* submenu2 선택된 항목 출력 */
+  .pickedBox > li {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 60px;
+  }
+  .pickedBox input {
+    display: none;
+  }
+  .pickedBox label {
+    position: relative;
+    margin-right: 15px;
+    height: 42px;
+    padding: 5px 50px 5px 20px;
+    line-height: 27px;
+    white-space: nowrap;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #9542bf;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  .pickedBox label::after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    content: "×";
+    color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+  }
+  .pickedBox label:hover {
+    color: #9542bf;
+    border: 1px solid #f5d1e9;
+    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+  }
+
+  /* 조건에 맞는 럼 출력 스위치 */
+  .filterBoxInner > button {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 4px;
+    width: 120px;
+    height: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-transform: capitalize;
+    background: #fff;
+    border: 2px solid #808292;
+  }
+  .filterBoxInner > button:hover {
+    color: #fff;
+    background: #808292;
+    border: 0;
+  }
+
+  /* 럼 출력 슬라이더 모양 */
+  .itemShow {
+    position: relative;
+  }
+  .carouselBox {
+    padding: 90px 75px 120px;
+    height: 855px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    background: url(../imgs/ourRumsCarouselBoxBg.png) no-repeat center;
+    background-size: cover;
+  }
+
+  /* 럼 출력 슬라이더 화살표*/
+  .Bchevron {
+    z-index: 9;
+    position: absolute;
+    cursor: pointer;
+    bottom: calc(50% - 50px);
+    filter: invert(0.7);
+    transition: all 0.4s ease-in;
+  }
+  .toLeft {
+    left: 130px;
+  }
+  .toLeft:hover {
+    filter: invert(0.1);
+  }
+  .toRight {
+    right: 130px;
+  }
+  .toRight:hover {
+    filter: invert(0.1);
+  }
+
+  /* 럼 출력 슬라이더 상품소개 박스 */
+  .itemBox {
+    display: inline-block;
+    position: relative;
+    padding: 50px;
+    margin: auto 25px;
+    width: 400px;
+    height: 645px;
+    border-radius: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in;
+  }
+  .itemBox:hover {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5), 0 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  .itemBox > .itemImg {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 45px;
+    border-radius: 300px;
+    object-fit: cover;
+  }
+  .itemBox > h5 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #e2e2e2;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .itemBox > p {
+    white-space: normal;
+    font-size: 16px;
+    color: #e2e2e2;
+    text-align: center;
+  }
+  .itemBox > a {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: calc(50% - 75px);
+    bottom: 50px;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 47px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    box-shadow: 2px 2px 3px 2px rgba(3, 3, 3, 0.5);
+    transition: all 0.3s ease-in;
+  }
+  .itemBox > a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.2) inset, 1px 1px 3px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(188, 188, 188, 0.5);
+  }
+}
+
+/* ///// TB ///// */
+@media screen and (min-width: 660px) and (max-width: 1049px) {
+  /* 섹션 타이틀 */
+  .subTitleBox {
+    height: 580px;
+    width: 100%;
+    background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
+    background-size: cover;
+    margin-bottom: 120px;
+  }
+  h2 {
+    padding-top: 230px;
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Abril Fatface", cursive;
+    font-weight: normal;
+    letter-spacing: 1px;
+
+    /* ↓↓↓↓↓혜수씨 세팅 따라하면 시안과 너무 달리짐↓↓↓↓↓ */
+    /* background: #FFFFFF;
+        background: -webkit-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        background: -moz-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        background: linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+
+    background: #ffffff;
+    background: -webkit-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    background: -moz-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    background: linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .sub2title {
+    width: 450px;
+    margin: 0 auto 10px;
+    text-align: center;
+    font-family: "Gowun Batang", serif;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 43px;
+  }
+  .h3_p_hd {
+    display: none;
+    width: 490px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .h3_p_tbsm {
+    /* display:none; */
+    width: 490px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h4 {
+    margin: 200px 0 -5px;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 42px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .h4_p {
+    text-align: center;
+  }
+
+  /* 메인메뉴 외부 박스 */
+  .filterBox {
+    width: 640px;
+    height: 720px;
+    margin: 60px auto 120px;
+    padding: 10px;
+    background: #f4f4f6;
+    border-radius: 10px;
+  }
+  .filterBoxInner {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  /* 메인메뉴 윤곽 */
+  #pickingBox > li {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #pickingBox > li:nth-child(4) {
+    margin-bottom: 20px;
+  }
+  #pickingBox > li:nth-child(8) {
+    margin-bottom: 30px;
+  }
+  .pickingBoxDesc,
+  .pickedBox {
+    position: absolute;
+    top: 0;
+    left: 149px;
+  } /*메인메뉴 제목 너비보다 1px작게*/
+  .pickingBoxDesc,
+  .pickedBox li {
+    width: 430px;
+    height: 62px;
+    padding: 0 20px;
+    color: #333;
+    line-height: 57px;
+    border: 1px solid #f5d1e9;
+    border-radius: 0 10px 10px 0;
+  }
+
+  /* 메인&서브메뉴 사이 블라인드 */
+  #pickingBox > li > .blind2 {
+    z-index: 9;
+    position: absolute;
+    left: 149px;
+    top: 62px; /*.pickedBox left값과 같게*/
+    width: 2px;
+    height: 10px;
+    background: #fff;
+  }
+  #pickingBox > li > .blind3 {
+    z-index: 2;
+    position: absolute;
+    left: 150px;
+    top: 1px; /*메인메뉴 제목 너비와 같게*/
+    width: 1px;
+    height: 60px;
+    background: #fff;
+  }
+  #pickingBox > li:nth-child(-n + 4) > label:hover + div {
+    z-index: 11;
+    position: absolute;
+    left: 149px;
+    top: 1px; /*메인메뉴 제목 너비보다 1작게*/
+    width: 2px;
+    height: 60px;
+    background: #fff;
+  }
+  #pickingBox > li:nth-child(-n + 4) > input:checked ~ div {
+    z-index: 11;
+    position: absolute;
+    left: 149px;
+    top: 1px; /*메인메뉴 제목 너비보다 1작게*/
+    width: 2px;
+    height: 60px;
+    background: #fff;
+  }
+
+  /* 메인메뉴 제목 모양 */
+  #pickingBox li,
+  #pickingBox label {
+    font-size: 16px;
+  }
+  #pickingBox > li > input {
+    display: none;
+  }
+  #pickingBox > li > label {
+    display: block;
+    width: 150px; /* width 초기값 176px */
+    height: 62px;
+    z-index: 9;
+    font-size: 16px;
+    color: #9542bf;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+    border: solid 1px #f5d1e9;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.4s ease-in;
+  }
+  #pickingBox > li:nth-child(-n + 4) > label:hover {
+    z-index: 11;
+    cursor: pointer;
+    line-height: 60px;
+    color: #333;
+    background: #fff;
+  }
+
+  #pickingBox > li:nth-child(-n + 4) > input:checked ~ label {
+    z-index: 11;
+    cursor: pointer;
+    line-height: 60px;
+    color: #333;
+    background: #fff;
+    border: solid 1px #f5d1e9;
+  }
+
+  /* 서브메뉴 모양 */
+  .submenu {
+    position: absolute;
+    z-index: 1;
+    left: 149px; /*메인메뉴 제목 너비보다 1 작게*/
+    /* display:none; */
+    /* padding:0 20px; */
+    /* width:981px; */
+    height: 278px;
+    width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f5d1e9; /* 얘를 가리기 위한 블라인드 필요, 전체 길이에 추가됨*/
+    border-radius: 0 10px 10px 0;
+    transition: all 0.4s ease-in; /* 작동 안하는 이유 불명 */
+  }
+  .submenuNose {
+    top: 0;
+  }
+  .submenuPalate {
+    top: -72px;
+  }
+  .submenuFinish {
+    top: -144px;
+  }
+  .submenuType {
+    top: -216px;
+  }
+
+  /* 서브메뉴 제목 선택 후 모양 */
+  #noseBtn:checked ~ .submenuNose {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 430px;
+    padding: 0 10px;
+  }
+  #palateBtn:checked ~ .submenuPalate {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 430px;
+    padding: 0 10px;
+  }
+  #finishBtn:checked ~ .submenuFinish {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 430px;
+    padding: 0 10px;
+  }
+  #typeBtn:checked ~ .submenuType {
+    z-index: 10;
+    border: 1px solid #f5d1e9;
+    width: 430px;
+    padding: 0 10px;
+  }
+
+  /* 서브메뉴 하위 항목 모양 */
+  .submenu input {
+    display: none;
+  }
+  .submenu input:checked + label {
+    color: #9542bf;
+    text-shadow: 0 0 2px #9542bf;
+  }
+  .submenu label {
+    float: left;
+  }
+  .submenu label {
+    display: block;
+    float: left;
+    padding: 10px 30px 10px 10px;
+    cursor: pointer;
+    font-size: 24px;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in;
+  }
+  .submenu label:hover {
+    color: #9542bf;
+  }
+
+  /* submenu2 스크롤 화살표 */
+  .pickedBox .chevron {
+    z-index: 9;
+    position: absolute;
+    width: 21px;
+    height: 42px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  .pickedBox .chevron:hover {
+    filter: invert(0.9);
+  }
+  .pickedBox .Lchevron {
+    left: 30px;
+    background: url(../imgs/toLeft.png) no-repeat center;
+    background-size: cover;
+    filter: invert(0.5);
+  }
+  .pickedBox .Rchevron {
+    right: 30px;
+    background: url(../imgs/toRight.png) no-repeat center;
+    background-size: cover;
+    filter: invert(0.5);
+  }
+  .pickedBox .toLeft1,
+  .pickedBox .toRight1 {
+    top: 10px;
+  }
+  .pickedBox .toLeft2,
+  .pickedBox .toRight2 {
+    top: 82px;
+  }
+  .pickedBox .toLeft3,
+  .pickedBox .toRight3 {
+    top: 154px;
+  }
+  .pickedBox .toLeft4,
+  .pickedBox .toRight4 {
+    top: 226px;
+  }
+
+  /* submenu2 overflow shading box */
+  .pickedBox .shading {
+    z-index: 8;
+    position: absolute;
+    width: 70px;
+    height: 60px;
+  }
+  .pickedBox div[class*="left"] {
+    left: 1px;
+    background: linear-gradient(to right, #fff 30%, rgba(33, 33, 33, 0) 70%);
+  }
+  .pickedBox div[class*="right"] {
+    right: 1px;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(to left, #fff 30%, rgba(33, 33, 33, 0) 70%);
+  }
+  .pickedBox div[class*="floor1"] {
+    top: 1px;
+  }
+  .pickedBox div[class*="floor2"] {
+    top: calc(1px + 72px);
+  }
+  .pickedBox div[class*="floor3"] {
+    top: calc(1px + 72px * 2);
+  }
+  .pickedBox div[class*="floor4"] {
+    top: calc(1px + 72px * 3);
+  }
+
+  /* submenu2 선택된 항목 출력 */
+  .pickedBox > li {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 60px;
+  }
+  .pickedBox input {
+    display: none;
+  }
+  .pickedBox label {
+    position: relative;
+    margin-right: 15px;
+    height: 42px;
+    padding: 5px 50px 5px 20px;
+    line-height: 27px;
+    white-space: nowrap;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #9542bf;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  .pickedBox label::after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    content: "×";
+    color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+  }
+  .pickedBox label:hover {
+    color: #9542bf;
+    border: 1px solid #f5d1e9;
+    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+  }
+
+  /* 조건에 맞는 럼 출력 스위치 */
+  .filterBoxInner > button {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 4px;
+    width: 120px;
+    height: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-transform: capitalize;
+    background: #fff;
+    border: 2px solid #808292;
+  }
+  .filterBoxInner > button:hover {
+    color: #fff;
+    background: #808292;
+    border: 0;
+  }
+
+  /* 럼 출력 슬라이더 모양 */
+  .itemShow {
+    position: relative;
+  }
+  .carouselBox {
+    padding: 38px 105px;
+    height: 720px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    background: url(../imgs/ourRumsCarouselBoxBg.png) no-repeat center;
+    background-size: cover;
+  }
+
+  /* 럼 출력 슬라이더 화살표*/
+  .Bchevron {
+    z-index: 9;
+    position: absolute;
+    cursor: pointer;
+    bottom: calc(50% - 50px);
+    filter: invert(0.7);
+    transition: all 0.4s ease-in;
+  }
+  .toLeft {
+    left: 27.5px;
+  }
+  .toLeft:hover {
+    filter: invert(0.1);
+  }
+  .toRight {
+    right: 27.5px;
+  }
+  .toRight:hover {
+    filter: invert(0.1);
+  }
+
+  /* 럼 출력 슬라이더 상품소개 박스 */
+  .itemBox {
+    display: inline-block;
+    position: relative;
+    padding: 50px;
+    margin: auto 25px;
+    width: 400px;
+    height: 644px;
+    border-radius: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in;
+  }
+
+  .itemBox:hover {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5), 0 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .itemBox > .itemImg {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 45px;
+    border-radius: 300px;
+    object-fit: cover;
+  }
+  .itemBox > h5 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #e2e2e2;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .itemBox > p {
+    white-space: normal;
+    font-size: 16px;
+    color: #e2e2e2;
+    text-align: center;
+  }
+
+  .itemBox > a {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: calc(50% - 75px);
+    bottom: 50px;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 47px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    box-shadow: 2px 2px 3px 2px rgba(3, 3, 3, 0.5);
+    transition: all 0.3s ease-in;
+  }
+  .itemBox > a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.2) inset, 1px 1px 3px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(188, 188, 188, 0.5);
+  }
+}
+
+/* ///// SM ///// */
+@media screen and (max-width: 659px) {
+  /* 섹션 타이틀 */
+  .subTitleBox {
+    height: 610px;
+    width: 100%;
+    background: url(../imgs/ourRumsTitleBoxImg.png) no-repeat center;
+    background-size: cover;
+    margin-bottom: 120px;
+  }
+  h2 {
+    padding-top: 350px;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-family: "Abril Fatface", cursive;
+
+    /* ↓↓↓↓↓혜수씨 세팅 따라하면 시안과 너무 달리짐↓↓↓↓↓ */
+    /* background: #FFFFFF;
+        background: -webkit-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        background: -moz-linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        background: linear-gradient(to bottom right, #FFFFFF 69%, #FFFFFF 69%, #F772D1 75%, #C872F2 75%, #FFFFFF 75%, #FFFFFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; */
+
+    background: #ffffff;
+    background: -webkit-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    background: -moz-linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    background: linear-gradient(to bottom right, #ffffff 0%, #ffffff 59%, #f772d1 64%, #c872f2 70%, #ffffff 85%, #ffffff 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .sub2title {
+    width: 280px;
+    margin: 0 auto 10px;
+    text-align: center;
+    font-family: "Gowun Batang", serif;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 27px; /*글자크기보다 1크게*/
+  }
+  .h3_p_hd {
+    display: none;
+    width: 490px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .h3_p_tbsm {
+    display: none;
+    width: 490px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  h4 {
+    margin: 200px 0 -5px;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .h4_p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* 메인메뉴 외부 박스 */
+  .filterBox {
+    width: 340px; /*최소너비 보다 20px작게*/
+    height: 670px; /*갤S5 최소높이는 640*/
+    margin: 60px auto 120px;
+    padding: 10px;
+    background: #f4f4f6;
+    border-radius: 10px;
+  }
+  .filterBoxInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  /* 메인메뉴 윤곽 */
+  #pickingBox > li {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #pickingBox > li:nth-child(4) {
+    margin-bottom: 20px;
+  }
+  #pickingBox > li:nth-child(8) {
+    margin-bottom: 30px;
+  }
+  .pickingBoxDesc,
+  .pickedBox {
+    position: absolute;
+    top: 0;
+    left: 69px;
+  } /*메인메뉴 제목 너비보다 1px작게*/
+  .pickingBoxDesc,
+  .pickedBox li {
+    width: 230px; /*최소너비 수정 시 계산하여 조정*/
+    height: 62px;
+    color: #333;
+    border: 1px solid #f5d1e9;
+    border-radius: 0 10px 10px 0;
+  }
+  .pickingBoxDesc {
+    padding: 0 10px;
+  }
+  .pickedBox li {
+    line-height: 57px;
+  }
+  #pickingBox > li:nth-child(4) > .pickingBoxDesc > li {
+    padding-top: 18px;
+  }
+  #pickingBox > li > .pickingBoxDesc > li {
+    font-size: 14px;
+    padding-top: 8px; /*최소너비 변경시 조정필*/
+  }
+
+  /* 메인메뉴 제목 모양 */
+  #pickingBox li,
+  #pickingBox label {
+    font-size: 16px;
+  }
+  #pickingBox > li > input {
+    display: none;
+  }
+  #pickingBox > li > label {
+    display: block;
+    width: 70px; /* width 초기값 176px */
+    height: 62px;
+    z-index: 9;
+    font-size: 16px; /*최소 너비에 맞게 조정*/
+    color: #9542bf;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 60px;
+    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+    border: solid 1px #f5d1e9;
+    border-radius: 10px 0 0 10px;
+    transition: all 0.4s ease-in;
+  }
+  #pickingBox > li:nth-child(-n + 4) > label:hover {
+    z-index: 11;
+    cursor: pointer;
+    line-height: 60px;
+    color: #333;
+    background: #fff;
+  }
+  #pickingBox > li:nth-child(-n + 4) > input:checked ~ label {
+    z-index: 11;
+    cursor: pointer;
+    line-height: 60px;
+    color: #333;
+    background: #fff;
+    border: solid 1px #f5d1e9;
+  }
+
+  /* 메인&서브메뉴 사이 블라인드 */
+  #pickingBox > li > .blind2 {
+    z-index: 9;
+    position: absolute;
+    left: 69px;
+    top: 62px; /*메인메뉴 제목 너비보다 1작게*/
+    width: 2px;
+    height: 10px;
+    background: #fff;
+  }
+  #pickingBox > li > .blind3 {
+    z-index: 2;
+    position: absolute;
+    left: 70px;
+    top: 1px; /*메인메뉴 제목 너비와 같게*/
+    width: 1px;
+    height: 60px;
+    background: #fff;
+  }
+  #pickingBox > li:nth-child(-n + 4) > label:hover + div {
+    z-index: 11;
+    position: absolute;
+    left: 69px;
+    top: 1px; /*메인메뉴 제목 너비보다 1작게*/
+    width: 2px;
+    height: 60px;
+    background: #fff;
+  }
+  #pickingBox > li:nth-child(-n + 4) > input:checked ~ div {
+    z-index: 11;
+    position: absolute;
+    left: 69px;
+    top: 1px; /*메인메뉴 제목 너비보다 1작게*/
+    width: 2px;
+    height: 60px;
+    background: #fff;
+  }
+
+  /* 서브메뉴 모양 */
+  .submenu {
+    position: absolute;
+    z-index: 1;
+    left: 69px; /*메인메뉴 제목 너비보다 1 작게*/
+    height: 278px;
+    width: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f5d1e9; /* 얘를 가리기 위한 블라인드 필요, 전체 길이에 추가됨*/
+    border-radius: 0 10px 10px 0;
+    transition: all 0.4s ease-in; /* 작동 안하는 이유 불명 */
+  }
+  .submenuNose {
+    top: 0;
+  }
+  .submenuPalate {
+    top: -72px;
+  }
+  .submenuFinish {
+    top: -144px;
+  }
+  .submenuType {
+    top: -216px;
+  }
+
+  /* 서브메뉴 슬라이드 모양 */
+  #noseBtn:checked ~ .submenuNose {
+    z-index: 10;
+    width: 230px; /* .pickingBoxDesc 너비와 같게 */
+    border: 1px solid #f5d1e9;
+  }
+  #palateBtn:checked ~ .submenuPalate {
+    z-index: 10;
+    width: 230px; /* .pickingBoxDesc 너비와 같게 */
+    border: 1px solid #f5d1e9;
+  }
+  #finishBtn:checked ~ .submenuFinish {
+    z-index: 10;
+    width: 230px; /* .pickingBoxDesc 너비와 같게 */
+    border: 1px solid #f5d1e9;
+  }
+  #typeBtn:checked ~ .submenuType {
+    z-index: 10;
+    width: 230px; /* .pickingBoxDesc 너비와 같게 */
+    border: 1px solid #f5d1e9;
+  }
+
+  /* 서브메뉴 하위 항목들 모양 */
+  .submenu input {
+    display: none;
+  }
+  .submenu input:checked + label {
+    color: #9542bf;
+    text-shadow: 0 0 2px #9542bf;
+  }
+  .submenu label {
+    float: left;
+  }
+  .submenu label {
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.4s ease-in;
+  }
+  .submenu label:hover {
+    color: #9542bf;
+  }
+  #pickingBox > li > .submenu > label {
+    font-size: 14px;
+  }
+
+  /* submenu2 스크롤 화살표 */
+  .pickedBox .chevron {
+    z-index: 9;
+    position: absolute;
+    width: 21px;
+    height: 42px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  .pickedBox .chevron:hover {
+    filter: invert(0.9);
+  }
+  .pickedBox .Lchevron {
+    left: 10px;
+    background: url(../imgs/toLeft.png) no-repeat center;
+    background-size: cover;
+    filter: invert(0.5);
+  }
+  .pickedBox .Rchevron {
+    right: 10px;
+    background: url(../imgs/toRight.png) no-repeat center;
+    background-size: cover;
+    filter: invert(0.5);
+  }
+  .pickedBox .toLeft1,
+  .pickedBox .toRight1 {
+    top: 10px;
+  }
+  .pickedBox .toLeft2,
+  .pickedBox .toRight2 {
+    top: 82px;
+  }
+  .pickedBox .toLeft3,
+  .pickedBox .toRight3 {
+    top: 154px;
+  }
+  .pickedBox .toLeft4,
+  .pickedBox .toRight4 {
+    top: 226px;
+  }
+
+  /* submenu2 overflow 쉐이딩박스 */
+  .pickedBox .shading {
+    z-index: 8;
+    position: absolute;
+    width: 30px;
+    height: 60px;
+  }
+  .pickedBox div[class*="left"] {
+    left: 1px;
+    background: linear-gradient(to right, #fff 30%, rgba(33, 33, 33, 0) 70%);
+  }
+  .pickedBox div[class*="right"] {
+    right: 1px;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(to left, #fff 30%, rgba(33, 33, 33, 0) 70%);
+  }
+  .pickedBox div[class*="floor1"] {
+    top: 1px;
+  }
+  .pickedBox div[class*="floor2"] {
+    top: calc(1px + 72px);
+  }
+  .pickedBox div[class*="floor3"] {
+    top: calc(1px + 72px * 2);
+  }
+  .pickedBox div[class*="floor4"] {
+    top: calc(1px + 72px * 3);
+  }
+
+  /* submenu2 선택된 항목 출력 */
+  .pickedBox > li {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 30px;
+  }
+  .pickedBox input {
+    display: none;
+  }
+  .pickedBox label {
+    position: relative;
+    margin-right: 15px;
+    height: 42px;
+    padding: 5px 50px 5px 20px;
+    line-height: 29px;
+    white-space: nowrap;
+    color: #333;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #9542bf;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  #pickingBox > li > .pickedBox > li > label {
+    font-size: 14px;
+  }
+  .pickedBox label::after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    content: "×";
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    width: 18px;
+    height: 18px;
+    background: #333;
+    border-radius: 50%;
+  }
+  .pickedBox label:hover {
+    color: #9542bf;
+    border: 1px solid #f5d1e9;
+    background: linear-gradient(to bottom, #fcb5e0 10%, #eeccec 95%);
+  }
+
+  /* 조건에 맞는 럼 출력 스위치 */
+  .filterBoxInner > button {
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 60px);
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 4px;
+    width: 120px;
+    height: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-transform: capitalize;
+    background: #fff;
+    border: 2px solid #808292;
+  }
+  .filterBoxInner > button:hover {
+    color: #fff;
+    background: #808292;
+    border: 0;
+  }
+
+  /* 럼 출력 슬라이더 모양 */
+  .itemShow {
+    position: relative;
+  }
+  .carouselBox {
+    padding: 20px 0px 10px 30px;
+    height: 600px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    background: url(../imgs/ourRumsCarouselBoxBg.png) no-repeat center;
+    background-size: cover;
+  }
+  .carouselBoxPlus {
+    padding: 38px 17px 38px 51px;
+  } /*.addClass*/
+  /* 럼 출력 슬라이더 화살표*/
+  .Bchevron {
+    z-index: 9;
+    position: absolute;
+    width: 25px;
+    cursor: pointer;
+    bottom: calc(50% - 25px);
+    filter: invert(0.7);
+    transition: all 0.4s ease-in;
+  }
+  .toLeft {
+    left: 10px;
+  }
+  .toLeft:hover {
+    filter: invert(0.1);
+  }
+  .toRight {
+    right: 10px;
+  }
+  .toRight:hover {
+    filter: invert(0.1);
+  }
+
+  /* 럼 출력 슬라이더 상품소개 박스 */
+  .itemBox {
+    display: inline-block;
+    position: relative;
+    padding: 50px 20px 30px;
+    margin-right: 30px;
+    width: 280px;
+    height: 560px;
+    border-radius: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in;
+  }
+
+  .itemBox:hover {
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5), 0 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .itemBox > .itemImg {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 25px;
+    border-radius: 300px;
+    object-fit: cover;
+  }
+  .itemBox > h5 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #e2e2e2;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .itemBox > p {
+    white-space: normal;
+    font-size: 14px;
+    color: #e2e2e2;
+    text-align: center;
+  }
+
+  .itemBox > a {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: calc(50% - 75px);
+    bottom: 50px;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 47px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-transform: capitalize;
+    box-shadow: 2px 2px 3px 2px rgba(3, 3, 3, 0.5);
+    transition: all 0.3s ease-in;
+  }
+  .itemBox > a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 0;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.2) inset, 1px 1px 3px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(188, 188, 188, 0.5);
+  }
+}
